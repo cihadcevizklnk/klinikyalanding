@@ -1,0 +1,46 @@
+.blogImg {
+  border-radius: 14px;
+  width: 19vw;
+  height: 10vw;
+  object-fit: contain;
+}
+.wrapper {
+  background: #fcffff;
+  box-shadow: 0px 4px 15px rgba(192, 192, 192, 0.14);
+  border-radius: 16px;
+  padding: 20px;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #a9b3b2;
+}
+.time {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #a9b3b2;
+}
+.button {
+  border: 1px solid #00a3ab;
+  border-radius: 3px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #00a3ab;
+  padding: 5px 50px;
+  width: fit-content;
+  margin-top: 5px;
+}

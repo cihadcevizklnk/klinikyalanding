@@ -1,0 +1,46 @@
+.text {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #a5a5a5;
+}
+
+.active {
+  font-size: 16px;
+  line-height: 19px;
+  color: #184645;
+  text-decoration: underline;
+  padding-bottom: 15px;
+}
+.navbar {
+  display: flex;
+  padding: 2vw 9vw;
+  align-items: center;
+  background: #f3fdfe;
+}
+
+.list {
+  display: flex;
+  gap: 3vw;
+  margin: 0 15vw;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #a5a5a5;
+}
+.signIn {
+  background: #00a3ab;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  padding: 6px 36px;
+  margin-right: 2vw;
+}
+.language {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  color: #1a2e4a;
+}

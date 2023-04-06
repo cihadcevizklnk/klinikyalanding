@@ -1,0 +1,66 @@
+.video {
+  background-image: url('/icons/Group\ 172.png');
+  background-repeat: round;
+  padding: 4.5% 6.5% 7% 7%;
+  margin: 0 auto;
+  display: flex;
+}
+.main {
+  background-image: url('/icons/Vector\ 4.png');
+  background-repeat: no-repeat;
+  background-position: 80% -10%;
+  margin-top: -5vh;
+}
+.img {
+  width: 30vw;
+  height: 16vw;
+}
+.wrapper {
+  padding: 50px 140px;
+}
+.center {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.button {
+  background: #00a3ab;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  padding: 12px 50px;
+  margin: 10px auto 0 auto;
+  display: flex;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh 0;
+  gap: 5vw;
+
+  img {
+    width: 30vw;
+
+    display: flex;
+  }
+  div {
+    width: 25vw;
+  }
+}
+.box2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh 0;
+  gap: 5vw;
+  img {
+    width: 30vw;
+  }
+  div {
+    width: 25vw;
+    margin-left: 5vw;
+  }
+}
