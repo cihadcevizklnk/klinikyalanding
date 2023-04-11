@@ -6,7 +6,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const CalendarComponent = ({ setFirstTime }: any) => {
+const CalendarComponent = ({ value, setValue }: any) => {
   const year = moment().year();
   const month = moment().month() + 1;
   const day = moment().date();
@@ -93,9 +93,14 @@ const CalendarComponent = ({ setFirstTime }: any) => {
     yearLetterSkip: 0,
     isRtl: false,
   };
+
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DatePicker label={t('SearchBar3')} />
+      <DatePicker
+        label={t('SearchBar3')}
+        value={value}
+        onChange={(newValue) => setValue(newValue)}
+      />
     </LocalizationProvider>
   );
 };

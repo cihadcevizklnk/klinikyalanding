@@ -53,6 +53,17 @@
   line-height: 20px;
   color: #1a2e4a;
 }
+.searchWrapperInside2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #1a2e4a;
+}
 .buttonSearch {
   background: #00a3ab;
   border-radius: 25.5px;
@@ -65,6 +76,7 @@
   display: flex;
   padding: 16px 32px;
   gap: 13px;
+  align-items: center;
 }
 .boxWrapper {
   background: #fafafa;
@@ -104,6 +116,7 @@
   background-color: #c1e7ec;
   width: 100%;
   height: 2px;
+  margin: 10px 0;
 }
 .description {
   font-family: 'Nunito';
@@ -112,6 +125,7 @@
   font-size: 20.69px;
   line-height: 28px;
   color: #2e384d;
+  text-transform: capitalize;
 }
 .view {
   font-family: 'Nunito';
@@ -273,4 +287,248 @@
   gap: 15px;
   margin: 30px auto;
   justify-content: center;
+}
+.viewWrapper {
+  display: flex;
+  margin-left: auto;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .partOneTop {
+    flex-direction: column-reverse;
+  }
+  .partOneTopRight {
+    width: 90%;
+  }
+  .button {
+    font-size: 12px;
+    line-height: 11px;
+    margin: 0 auto;
+  }
+  .searchWrapperInside2 {
+    display: none;
+  }
+  .searchWrapper {
+    padding: 0;
+  }
+  .input {
+    font-size: 14px;
+    line-height: 19px;
+    height: 20px;
+    padding-left: 0px;
+    width: 200px;
+  }
+  .line {
+    display: none;
+  }
+  .partOneWrapper {
+    padding: 36px 5vw;
+    gap: 40px;
+  }
+  .buttonSearch {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 10px;
+    gap: 10px;
+  }
+  .icon {
+    width: 14px;
+  }
+  .searchWrapperInside {
+    margin-left: 5px;
+  }
+
+  .procedureText {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 40px;
+  }
+  .partTwoWrapper {
+    padding: 36px 5vw;
+  }
+  .procedures {
+    margin: 0;
+  }
+  .boxWrapper {
+    width: 80vw;
+    padding: 10px;
+  }
+  .operation {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .hospital {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .view {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .longLine {
+    margin: 0 5px;
+  }
+  .partThreeWrapper {
+    padding: 36px 5vw;
+  }
+  .departmentsText {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 40px;
+  }
+  .title {
+    margin-bottom: 15px;
+  }
+  .departments {
+    grid-template-columns: repeat(2, auto);
+  }
+  .department {
+    padding: 10px;
+    img {
+      width: 52px;
+    }
+  }
+  .departmentTitle {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .departmentText {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .partFourWrapper {
+    padding: 36px 5vw;
+  }
+  .hospitals {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .viewHospital {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .partFiveWrapper {
+    padding: 36px 5vw;
+  }
+  .blogText {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 40px;
+  }
+  .blogs {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .partOneWrapper {
+    padding: 36px 10vw;
+    gap: 50px;
+  }
+  .partOneTop {
+    flex-direction: column-reverse;
+  }
+  .partOneTopLeft {
+    align-items: center;
+    text-align: center;
+  }
+  .button {
+    font-size: 10px;
+    line-height: 13px;
+    padding: 10px 37px;
+  }
+  .searchWrapper {
+    padding: 20px;
+  }
+  .input {
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 0px;
+    width: 180px;
+  }
+  .searchWrapperInside2 {
+    padding-left: 10px;
+  }
+  .partTwoWrapper {
+    padding: 36px 5vw;
+  }
+  .title {
+    font-size: 16px;
+    line-height: 45px;
+  }
+  .procedureText {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 40px;
+  }
+  .procedures {
+    margin: 0;
+  }
+  .operation {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .hospital,
+  .description {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .view {
+    font-size: 9.89495px;
+    line-height: 13px;
+  }
+  .boxWrapper {
+    padding: 10px;
+    width: 25vw;
+  }
+  .imageHospital {
+    width: 5vw;
+  }
+  .description {
+    flex: 1 1 auto;
+  }
+  .boxWrapperTop {
+    height: 8vh;
+    align-items: center;
+  }
+  .partThreeWrapper {
+    padding: 36px 5vw;
+  }
+  .departmentsText {
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 40px;
+  }
+  .departments {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .department {
+    padding: 10px;
+    img {
+      width: 78px;
+    }
+    width: 25vw;
+  }
+  .departmentTitle {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .departmentsText {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .departments:nth-of-type(3) {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns in the last row */
+    background-color: red;
+  }
+  .partFourWrapper {
+    padding: 36px 5vw;
+  }
 }

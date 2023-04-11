@@ -123,3 +123,26 @@ export const getCities = (setArr: any) => {
     .then((res) => setArr(res?.Items))
     .catch((error) => console.log('error', error));
 };
+
+export const getBlog = (id: any, locale: any, setArr: any) => {
+  var myHeaders = new Headers();
+  myHeaders.append('Accept', 'text/plain');
+  myHeaders.append(
+    'Cookie',
+    'ARRAffinity=280acb3c0367cac76a456a7866003bea050374037143b24243d718b2c4cd2318; ARRAffinitySameSite=280acb3c0367cac76a456a7866003bea050374037143b24243d718b2c4cd2318'
+  );
+
+  var requestOptions: RequestInit = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow',
+  };
+
+  fetch(
+    `https://klinikya-new-dev.azurewebsites.net/api/Data/get-blog?id=${id}&locale=${locale}`,
+    requestOptions
+  )
+    .then((response) => response.json())
+    .then((res) => setArr(res?.Item))
+    .catch((error) => console.log('error', error));
+};

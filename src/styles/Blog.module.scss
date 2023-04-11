@@ -44,3 +44,25 @@
   width: fit-content;
   margin-top: 5px;
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    width: 100%;
+  }
+  .blogImg {
+    width: auto;
+    height: 20vw;
+  }
+  .time {
+    font-size: 11.2421px;
+    line-height: 15px;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .button {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 5px 35px;
+  }
+}

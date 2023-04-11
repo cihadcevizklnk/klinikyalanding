@@ -7,7 +7,9 @@ const Professionals = () => {
     <div className={styles.wrapper}>
       <h1 className={styles.center}>{t('ptitle1')}</h1>
       <p className={styles.center}>{t('ptext1')}</p>
-      <button className={styles.button}>{t('getStarted')}</button>
+      <a href="mailto:hello@klinikya.com">
+        <button className={styles.button}>{t('getStarted')}</button>
+      </a>
       <section>
         <div className={styles.box}>
           <img

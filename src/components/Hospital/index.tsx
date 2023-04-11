@@ -10,7 +10,9 @@ const Hospital = ({ item }: any) => {
   };
   const router = useRouter();
   const handleClick = (id: number) => {
-    router.push(`http://klinik.klinikya.com/hospital-details?id=${id}`);
+    router.push(
+      `https://portal-klinikya.azurewebsites.net/hospital-details?id=${id}`
+    );
   };
   return (
     <div className={styles.hospital} onClick={() => handleClick(item?.Id)}>
@@ -18,7 +20,7 @@ const Hospital = ({ item }: any) => {
         src={
           src && control === item?.Id
             ? src
-            : item?.LogoLocation === null
+            : item?.CoverLocation === null
             ? '/icons/klinikyaLogo.svg'
             : item?.LogoLocation
         }

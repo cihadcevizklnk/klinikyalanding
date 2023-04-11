@@ -6,7 +6,9 @@ const Web = () => {
     <div className={styles.wrapper}>
       <h1 className={styles.center}>{t('wtext1')}</h1>
       <p className={styles.center}>{t('wtext1')}</p>
-      <button className={styles.button}>{t('getStarted')}</button>
+      <a href="mailto:hello@klinikya.com">
+        <button className={styles.button}>{t('getStarted')}</button>
+      </a>
       <section className={styles.box}>
         <img src="/icons/Frame 140.svg" alt="computer" className={styles.img} />
         <div>

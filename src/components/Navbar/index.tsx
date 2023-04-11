@@ -3,13 +3,30 @@ import i18n from 'i18next';
 import styles from './styles.module.scss';
 import { useState } from 'react';
 import Link from 'next/link';
+import Select from 'react-select/creatable';
 const Navbar = ({ clicked, setClicked }: any) => {
   const { t } = useTranslation();
   const language = i18n.language;
-
+  const options = [
+    { value: 'tr', label: t('turkish') },
+    { value: 'en', label: t('english') },
+    { value: 'de', label: t('deutch') },
+    { value: 'ar', label: t('arabic') },
+    { value: 'ru', label: t('russian') },
+  ];
+  const [value, setValue] = useState<any>();
+  const handleChangeLanguage = (val: any) => {
+    i18n.changeLanguage(val);
+    setValue(val);
+  };
+  console.log(language, 'esra');
   return (
     <nav className={styles.navbar}>
-      <img src="/icons/klinikyaLogo.svg" alt="klinikya" />
+      <img
+        src="/icons/klinikyaLogo.svg"
+        alt="klinikya"
+        className={styles.logo}
+      />
       <div className={styles.list}>
         <Link
           href="/"
@@ -39,17 +56,22 @@ const Navbar = ({ clicked, setClicked }: any) => {
         >
           {t('service')}
         </Link>
-        <div
-          className={clicked === 5 ? styles.active : styles.text}
-          onClick={() => setClicked(5)}
-        >
-          {t('blog')}
-        </div>
+        {language === 'tr' && (
+          <Link
+            href="/blog"
+            className={clicked === 5 ? styles.active : styles.text}
+            onClick={() => setClicked(5)}
+          >
+            {t('blog')}
+          </Link>
+        )}
       </div>
       <button className={styles.signIn}>{t('signIn')}</button>
-      <button className={styles.language}>
-        {language === 'tr' ? 'ENG' : 'TR'}
-      </button>
+      <Select
+        options={options}
+        onChange={(val: any) => handleChangeLanguage(val.value)}
+        placeholder={t('language')}
+      />
     </nav>
   );
 };

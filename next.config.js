@@ -28,5 +28,5 @@ module.exports = withCSS({
   },
 });
 module.exports = {
-  serverPort: 3001, // Bu örnekte 3001 portunu kullanıyoruz. İstediğiniz portu belirtebilirsiniz.
+  serverPort: 3000, // Bu örnekte 3001 portunu kullanıyoruz. İstediğiniz portu belirtebilirsiniz.
 };

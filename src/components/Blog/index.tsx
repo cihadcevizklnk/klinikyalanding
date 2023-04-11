@@ -32,7 +32,7 @@ const Blog = ({ item }: any) => {
           ?.format('ddd DD, MM')}
       </p>
       <h3>{item?.Title}</h3>
-      <p className={styles.text}>{item?.ShortText}</p>
+      <p className={styles.text}>{item?.ShortText?.slice(0, 300)}...</p>
       <button className={styles.button}>{t('read')}</button>
     </div>
   );

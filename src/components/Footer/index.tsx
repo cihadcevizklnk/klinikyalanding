@@ -77,13 +77,17 @@ const Footer = ({ clicked, setClicked }: any) => {
             href="https://play.google.com/store/apps/details?id=com.klinikya&pli=1"
             target="_blank"
           >
-            <img src="/icons/Badge Android.svg" alt="android" />
+            <img
+              src="/icons/Badge Android.svg"
+              alt="android"
+              className={styles.icon}
+            />
           </a>
           <a
             href="https://apps.apple.com/gb/app/klinikya/id1637444703"
             target="_blank"
           >
-            <img src="/icons/Badge iOS.svg" alt="ios" />
+            <img src="/icons/Badge iOS.svg" alt="ios" className={styles.icon} />
           </a>
         </div>
       </section>
