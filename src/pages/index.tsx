@@ -14,7 +14,7 @@ import Switch from 'react-switch';
 import { useCallback } from 'react';
 import Link from 'next/link';
 import i18n from '../i18n';
-export default function Home({ setClicked }: any) {
+export default function Home({ targetRef }: any) {
   const router = useRouter();
   const handleClick = (e: any) => {
     e.preventDefault();
@@ -88,113 +88,6 @@ export default function Home({ setClicked }: any) {
     setVideoVisit(!videoVisit);
   }, [videoVisit]);
   const [value, setValue] = useState<any>();
-  // const obj = {
-  //   title1: 'Genel Bakış',
-  //   text1:
-  //     'Diabetes mellitus, vücudunuzun kan şekerini (glikoz) nasıl kullandığını etkileyen bir grup hastalığı ifade eder. \nGlikoz vücudunuzun sağlığı için hayati önem taşır çünkü kaslarınızı ve dokularınızı oluşturan hücreler için önemli bir enerji kaynağıdır. Aynı zamanda beyninizin ana yakıt kaynağıdır. \nDiyabetin altında yatan nedenler türüne göre değişir. Ancak, ne tür diyabetiniz olursa olsun, kanınızda aşırı şeker bulunmasına neden olabilir. Kanınızda çok fazla şeker bulunması ciddi sağlık sorunlarına yol açabilir. \nKronik diyabet hastalığı, tip 1 ve tip 2 diyabet olarak ikiye ayrılır. İyileşebilen diyabet hastalıkları arasında prediyabet ve gestasyonel diyabet bulunur. \nPrediyabet, kan şekeri seviyesi normalden yüksek olduğunda ancak diyabet olarak sınıflandırılacak kadar yüksek olmadığında ortaya çıkar. İlerlemesini önlemek için uygun önlemler alınmadıkça, prediyabet genellikle diyabetin öncüsüdür. Gestasyonel diyabet hamilelik sırasında ortaya çıkar ancak bebek doğduktan sonra düzelebilir.',
-  //   title2: 'Semptomlar',
-  //   text2:
-  //     'Diyabet belirtileri, kan şekerinizin ne kadar yükseldiğine bağlı olarak değişir. Bazı kişilerde, özellikle prediyabet veya tip 2 diyabet hastalığı olanlarda bazen semptomlar görülmeyebilir. Tip 1 diyabette semptomlar hızla ortaya çıkma ve daha şiddetli olma eğilimindedir. \nTip 1 diyabet ve tip 2 diyabetin bazı belirti ve semptomları aşağıdaki gibi listelenebilir:',
-  //   arr2: [
-  //     'Artan susuzluk',
-  //     'Sık idrara çıkma',
-  //     'Aşırı açlık',
-  //     'Açıklanamayan kilo kaybı',
-  //     'İdrarda keton varlığı (ketonlar, yeterli insülin olmadığında meydana gelen kas ve yağın parçalanmasının bir yan ürünüdür)',
-  //     'Yorgunluk',
-  //     'Sinirlilik',
-  //     'Bulanık görme',
-  //     'Yavaş iyileşen yaralar',
-  //     'Diş etleri veya cilt enfeksiyonları ve vajinal enfeksiyonlar gibi sık görülen enfeksiyonlar',
-  //   ],
-  //   text3:
-  //     'Tip 1 diyabet her yaşta gelişebilir, ancak sıklıkla çocukluk veya ergenlik döneminde ortaya çıkar. Daha yaygın olan tip 2 diyabet ise her yaşta gelişebilir, ancak 40 yaşından büyük kişilerde daha sık görülür.',
-  //   title4small: 'Ne zaman hastaneye başvurmalıyız?',
-  //   arr4: [
-  //     'Sizde veya çocuğunuzda diyabet olabileceğinden şüpheleniyorsanız. Herhangi bir olası diyabet belirtisi fark ederseniz, doktorunuzla iletişime geçin. Durum ne kadar erken teşhis edilirse, tedavi o kadar erken başlayabilir.',
-  //     'Eğer size zaten diyabet teşhisi konulduysa. Size teşhisiniz konulduktan sonra, kan şekeri seviyeleriniz stabilize olana kadar yakın tıbbi takibe ihtiyacınız olacaktır.',
-  //   ],
-  //   title5: 'Nedenleri',
-  //   text5:
-  //     'Diyabeti anlamak için öncelikle glikozun vücutta normal olarak nasıl işlendiğini anlamalısınız.',
-  //   title6small: 'İnsülin nasıl çalışır',
-  //   text6:
-  //     'İnsülin, midenin arkasında ve altında bulunan bir bezden salgılanan bir hormondur.',
-  //   arr6: [
-  //     'Pankreas kan dolaşımına insülin salgılar.',
-  //     'Kanda dolaşan insülin, şekerin hücrelere geçişini sağlar.',
-  //     'İnsülin kandaki serbest şekerin azalmasına sebep olur.',
-  //     'Kanda azalan şeker ile birlikte, pankreastan salınan insülin salınımı da azalır.',
-  //   ],
-  //   title7small: 'Glikozun Görevi',
-  //   text7:
-  //     'Glikoz - bir tür şeker - kas ve dokuların yapı taşı olan hücrelerin temel enerji kaynağıdır.',
-  //   arr7: [
-  //     'Glikoz iki temel kaynaktan gelir: besinler ve karaciğer',
-  //     'Şeker kana emilir ve burada insülin yardımı ile hücrelere geçer.',
-  //     'Karaciğeriniz glikoz üretir ve depolar.',
-  //     'Kandaki glikoz miktarı düşünce, örneğin uzun süre aç kaldığınızda, karaciğerde depolanmış olan glikojen glikoz formunda kana salınarak şeker miktarını dengede tutar.',
-  //   ],
-  //   title8small: 'Tip 1 diyabetin nedenleri',
-  //   text8:
-  //     'Tip 1 diyabetin kesin nedeni bilinmemektedir. Bilinen şu ki, normalde zararlı bakteri veya virüslerle savaşan bağışıklık sisteminiz pankreastaki insülin üreten hücrelere saldırır ve onları yok eder. Bu size çok az veya hiç insülin bırakmaz. Bu durum şekerin hücrelerinize taşınmak yerine, kan dolaşımınızda şeker birikmesine neden olur. \nTip 1 diyabetin genetik yatkınlık ve çevresel faktörlerin bir kombinasyonundan kaynaklandığı düşünülmektedir, ancak bu faktörlerin hala tam olarak ne olduğu belirsizdir. Kilonun tip 1 diyabette bir faktör olduğuna inanılmamaktadır.',
-  //   title9small: 'Prediyabet ve tip 2 diyabetin nedenleri',
-  //   text9:
-  //     'Tip 2 diyabette ve buna sebep olabilen prediyabette, hücreleriniz insüline karşı direnç kazanır ve pankreasınız bu direnci kıracak miktarda insülin üretemez. Dolayısıyla, kanınızdaki şeker hücrelerinize geçmek yerine kanda birikmeye başlar. \nKesin sebebi belli olmamakla birlikte, tip 2 diyabetin sebepleri arasında genetik ve çevresel faktörlerin de rol oynadığı düşünülür. Aşırı kilolu olmak ve tip 2 diyabet arasında güçlü bir bağlantı olmakla birlikte, tüm tip 2 diyabet hastalarının kilolu olmadıkları gözlemlenmiştir.',
-  //   title10small: 'Gestasyonel diyabetin nedenleri',
-  //   text10:
-  //     'Hamilelik döneminde, plasenta hamileliğin devamı için bazı hormonlar salgılar. Bu hormonlar insülin direncinin daha da yükselmesine sebep olur. \nNormal koşullarda, pankreasınız fazladan insülin üreterek bu direncin üstesinden gelir. Ancak bazen pankreas bu görevde başarısız olur. Bu durum, kandaki şekerin ancak çok az bir kısmının hücreye geçişini sağlar ve geriye kalan fazla şeker gestasyonel diyabete sebep olur.',
-  //   title11: 'Risk faktörleri',
-  //   text11: 'Diyabet için risk faktörleri diyabet tipine göre değişir.',
-  //   title12small: 'Tip 1 diyabet için risk faktörleri',
-  //   text12:
-  //     'Tip 1 diyabetin kesin nedeni bilinmemekle birlikte, risk artışına neden olabilecek faktörler şunlardır:',
-  //   arr12: [
-  //     'Aile öyküsü. Bir ebeveyninizde veya bir kardeşinizde tip 1 diyabet varsa riskiniz artar.',
-  //     'Çevresel faktörler. Virütik bir hastalığa maruz kalmak gibi bazı durumlar da tip 1 diyabete sebep olur.',
-  //     'Zararlı bağışıklık sistemi hücrelerinin varlığı (otoantikorlar). Bazen tip 1 diyabetli kişilerin aile üyeleri, diyabet otoantikorlarının varlığı için test edilir. Bu otoantikorlara sahip olan herkes diyabet olmaz. Ancak bu otoantikorlara sahipseniz, tip 1 diyabet olma riskiniz artar.',
-  //   ],
-  //   title13: 'Prediyabet ve tip 2 diyabet için risk faktörleri',
-  //   text13:
-  //     'Araştırmacılar, neden bazı insanların tip 2 diyabete ve prediyabete yakalandığını ve bazı insanların yakalanmadıklarını tam olarak çözümlememişlerdir. Ancak, bu hastalıklara yol açan bazı faktörler kesin olarak bilinmektedir:',
-  //   arr13: [
-  //     'Kilo. Daha yağlı dokular, daha yüksek insülin direncine sebep olur.',
-  //     'Aktivite eksikliği. Ne kadar az hareket ederseniz, hastalığa yakalanma riskiniz o kadar artar. Fiziksel aktivite kilonuzu kontrol etmenize yardımcı olur, fazla glikozu harcayarak hücrelerinizin insülin direncini düşürür.',
-  //     'Aile öyküsü. Bir ebeveyninizde veya bir kardeşinizde tip 2 diyabet varsa riskiniz artar.',
-  //     'Yaş. Yaşınız ilerledikçe yakalanma riskiniz artar. Bunun sebebi daha az hareket etmek ya da vücutta kasların azalıp yağların artması olabilir. Ancak, günümüzde tip 2 diyabete, daha genç yaş gruplarında da sık rastlanmaktadır.',
-  //     'Gestasyonel diyabet. Hamileyken gestasyonel diyabete yakalanırsanız, sonrasında prediyabet ve tip 2 diyabete yakalanma riskiniz artar. Doğan bebek 4 kilodan daha ağırsa, tip 2 diyabete yakalanma riskiniz artar.',
-  //     ,
-  //     'Polikistik over sendromu. Kadınlarda polikistik over sendromu - sıklıkla düzensiz menstrual döngü, fazla kıl büyümesi ve obezite ile sonuçlanır - diyabet riskini artırır.',
-  //     'Yüksek kan basıncı. 140/90 milimetre civadan (mmHg) yüksek olan kan basıncı tip 2 diyabet riskinde artışa sebep olur.',
-  //     'Anormal kolesterol ve trigliserit seviyeleri. Eğer fazla miktarda yüksek yoğunluklu lipoprotein (HDL) veya &quot;iyi,&quot; kolesterole sahipseniz, tip 2 diyabete yakalanma riskiniz artar. Trigliseritler kanda taşınan bir yağ çeşididir. yüksek miktarda trigliserite sahip olan insanlarda yüksek seviyede tip 2 diyabete yakalanma riski vardır. Doktorunuz trigliserit ve kolesterol seviyeleriniz hakkında sizi bilgilendirebilir.',
-  //   ],
-  //   title14small: 'Gestasyonel diyabet için risk faktörleri',
-  //   text14:
-  //     'Hamile kadınlarda gestasyonel diyabet gelişebilir. Bazı kadınlar diğer kadınlara göre daha fazla risk altındadır. Gestasyonel diyabet için risk faktörleri şunları içerir:',
-  //   arr14: [
-  //     'Yaş. 25 yaşından büyük kadınlarda risk daha fazladır.',
-  //     'Aile veya kişisel geçmiş. Tip 2 diyabetin öncüsü olan prediyabetiniz varsa veya ebeveyn veya kardeş gibi yakın bir aile üyenizde tip 2 diyabet varsa riskiniz artar. Ayrıca, önceki bir hamilelik sırasında gestasyonel diyabetiniz varsa, çok büyük bir bebek doğurduysanız veya açıklanamayan bir ölü doğum yaptıysanız daha büyük risk grubundasınızdır.',
-  //     'Kilo. Hamilelikten önce fazla kilolu olmak gestasyonel diyabet riskini artırır.',
-  //     'Irk ya da etnik köken.Sebepleri tam olarak bilinmeyen nedenlerden dolayı, Siyah, Hispanik, Amerikan Kızılderili veya Asyalı Amerikalı kadınların gestasyonel diyabet geliştirme olasılığı daha yüksektir.',
-  //   ],
-  //   title15: 'Komplikasyonları',
-  //   text15:
-  //     'Diyabetin uzun vadeli komplikasyonları yavaş yavaş gelişir. Diyabetiniz ne kadar uzun sürerse ve kan şekerinizi ne kadar az kontrol ederseniz, komplikasyon riski o kadar yüksek olur. Sonunda, diyabet komplikasyonları sakat bırakabilir ve hatta ölümle sonuçlanabilir. Olası komplikasyonlar şunları içerir:',
-  //   arr15: [
-  //     'Kalp-damar hastalığı. Diyabet, göğüs ağrısı (anjina), kalp krizi, inme ve arterlerin daralması (ateroskleroz) ile birlikte koroner arter hastalığı dahil olmak üzere çeşitli kardiyovasküler problemlerin riskini önemli ölçüde artırır. Şeker hastalığınız varsa, kalp hastalığı veya felç geçirme olasılığınız daha yüksektir.',
-  //     'Sinir hasarı (nöropati). Aşırı şeker, özellikle bacaklarınızdaki sinirlerinizi besleyen küçük kan damarlarının (kılcal damarlar) duvarlarına zarar verebilir. Bu, genellikle ayak parmaklarının veya parmakların uçlarında başlayan ve yavaş yavaş yukarı doğru yayılan karıncalanma, uyuşma, yanma veya ağrıya neden olabilir.',
-  //     'Tedavi edilmezse, etkilenen uzuvlardaki tüm hisleri kaybedebilirsiniz. Sindirimle ilgili sinirlerin zarar görmesi mide bulantısı, kusma, ishal veya kabızlık sorunlarına neden olabilir. Erkeklerde erektil disfonksiyona neden olabilir.',
-  //     'Böbrek hasarı (nefropati). Böbrekler, kanınızdaki atıkları filtreleyen milyonlarca küçük kan damarı kümesi (glomerül) içerir. Şeker hastalığı bu hassas filtreleme sistemine zarar verebilir. Şiddetli hasar, böbrek yetmezliğine veya diyaliz veya böbrek nakli gerektirebilecek geri dönüşü olmayan son evre böbrek hastalığına yol açabilir.',
-  //     'Göz hasarı (retinopati). Diyabet, retinanın kan damarlarına zarar verebilir (diyabetik retinopati),ve bu potansiyel olarak körlüğe yol açabilir. Diyabet, katarakt ve glokom gibi diğer ciddi görme hastalığı risklerini de artırır.',
-  //     'Ayak hasarı. Ayaklardaki sinir hasarı veya ayaklara zayıf kan akışı, çeşitli ayak hastalıkları riskini artırır. Tedavi edilmeyen kesikler ve kabarcıklar, genellikle gittikçe kötüleşen ciddi enfeksiyonlara sebep olabilir. Bu enfeksiyonlar nihayetinde ayak parmağı, ayak veya bacak amputasyonu gerektirebilir.',
-  //     'Cilt problemleri. Diyabet, sizi bakteri ve mantar enfeksiyonları da dahil olmak üzere cilt sorunlarına karşı daha duyarlı hale getirebilir.',
-  //     'İşitme bozukluğu. İşitme sorunları diyabetli kişilerde daha sık görülür.',
-  //     'Depresyon. Tip 1 ve tip 2 diyabetli kişilerde depresyon belirtileri yaygındır. Depresyon diyabet yönetimini etkileyebilir.',
-  //   ],
-  //   title16: 'Gestasyonel diyabet komplikasyonları',
-  // };
-  // const result = JSON.stringify(obj);
-
   const searchData = (id: number) => {
     const myObj = {
       id: id,
@@ -203,7 +96,7 @@ export default function Home({ setClicked }: any) {
       department: true,
     };
     const encodedObj = encodeURIComponent(JSON.stringify(myObj));
-    router.push(`http://localhost:3000/global-search?obj=${encodedObj}`);
+    router.push(`http://klinik.klinikya.com/global-search?obj=${encodedObj}`);
   };
   const handleApp = () => {
     router.push(`http://klinik.klinikya.com/?start=landing`);
@@ -280,6 +173,7 @@ export default function Home({ setClicked }: any) {
       `http://klinik.klinikya.com/hospital-details?obj=${encodedObj}`
     );
   };
+  console.log(targetRef, 'esraxs');
   return (
     <>
       <Head>
@@ -475,7 +369,9 @@ export default function Home({ setClicked }: any) {
           </Link>
         </section>
         <section className={styles.partThreeWrapper} ref={departments}>
-          <h1 className={styles.title}>{t('departments')}</h1>
+          <h1 ref={targetRef} className={styles.title}>
+            {t('departments')}
+          </h1>
           <p className={styles.departmentsText}>{t('departmentsText')}</p>
           <div className={styles.departments}>
             <div className={styles.department} onClick={() => searchData(84)}>

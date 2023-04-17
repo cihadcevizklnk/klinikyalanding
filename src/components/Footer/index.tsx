@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import styles from '../../styles/Footer.module.scss';
+import { useRef } from 'react';
 const Footer = ({ clicked, setClicked }: any) => {
   const { t } = useTranslation();
   function handleCategory(categoryRef: any, e: any) {
@@ -15,6 +16,8 @@ const Footer = ({ clicked, setClicked }: any) => {
     setClicked(e);
     document.body.scrollTop = 0;
   };
+  const targetRef = useRef(null);
+
   return (
     <footer className={styles.footer}>
       <section className={styles.footerLeft}>
