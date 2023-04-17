@@ -6,7 +6,7 @@ const Professionals = () => {
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.center}>{t('ptitle1')}</h1>
-      <p className={styles.center}>{t('ptext1')}</p>
+      <p className={` ${styles.text} ${styles.center} `}>{t('ptext1')}</p>
       <a href="mailto:hello@klinikya.com">
         <button className={styles.button}>{t('getStarted')}</button>
       </a>
@@ -19,7 +19,7 @@ const Professionals = () => {
           />
           <div>
             <h2>{t('ptitle2')}</h2>
-            <p>{t('ptext2')}</p>
+            <p className={styles.text}>{t('ptext2')}</p>
           </div>
         </div>
         <div className={styles.box2}>
@@ -30,7 +30,7 @@ const Professionals = () => {
           />
           <div>
             <h2>{t('ptitle3')}</h2>
-            <p>{t('ptext3')}</p>
+            <p className={styles.text}>{t('ptext3')}</p>
           </div>
         </div>
         <div className={styles.box}>
@@ -41,14 +41,14 @@ const Professionals = () => {
           />
           <div>
             <h2>{t('ptitle4')}</h2>
-            <p>{t('ptext4')}</p>
+            <p className={styles.text}>{t('ptext4')}</p>
           </div>
         </div>
         <div className={styles.box2}>
           <img src="/icons/CRM.svg" alt="CRM" className={styles.img} />
           <div>
             <h2>{t('ptitle5')}</h2>
-            <p>{t('ptext5')}</p>
+            <p className={styles.text}>{t('ptext5')}</p>
           </div>
         </div>
       </section>

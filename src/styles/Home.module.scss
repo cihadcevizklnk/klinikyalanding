@@ -4,29 +4,30 @@
   border: 1px solid #00a3ab;
 }
 .partOneWrapper {
-  padding: 5vw 10vw;
+  padding: 5vw 7vw;
   display: flex;
   flex-direction: column;
   gap: 100px;
 }
 .partOneTop {
   display: flex;
-  gap: 5vw;
+  justify-content: space-between;
   align-items: center;
 }
 .partOneTopLeft {
   display: flex;
   flex-direction: column;
-  flex: 2;
+  width: 45vw;
   gap: 25px;
 }
 .partOneTopRight {
-  flex: 1;
+  width: 30vw;
 }
 .button {
   background: #00a3ab;
   border-radius: 3px;
   font-size: 16px;
+  font-family: 'FontThin';
   line-height: 25px;
   text-align: center;
   color: #ffffff;
@@ -40,13 +41,13 @@
   border-radius: 133px;
   display: flex;
   justify-content: space-between;
-  padding: 40px 73px;
+  padding: 20px 53px;
 }
 .searchWrapperInside {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Nunito';
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -57,17 +58,137 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Nunito';
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
   color: #1a2e4a;
+  div {
+    // margin-left: 20px !important;
+    width: 12vw;
+    label {
+      font-family: 'FontThin' !important;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      font-size: 15px !important;
+      line-height: 20px !important;
+      color: #1a2e4a !important;
+      margin-top: 3px !important;
+    }
+    div {
+      // font-family: 'FontThin' !important;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      font-size: 15px !important;
+      line-height: 20px !important;
+      color: #1a2e4a !important;
+      margin-top: 3px !important;
+
+      fieldset {
+        border: none !important;
+      }
+    }
+    div:focused {
+      color: #1a2e4a !important;
+    }
+  }
+}
+.searchWrapperInside3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'FontThin';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #1a2e4a;
+  padding-left: 20px;
+  div {
+    width: 11vw;
+    label {
+      font-family: 'FontThin' !important;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      font-size: 15px !important;
+      line-height: 20px !important;
+      color: #1a2e4a !important;
+      margin-top: 3px !important;
+    }
+    div {
+      // font-family: 'FontThin' !important;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      font-size: 15px !important;
+      line-height: 20px !important;
+      color: #1a2e4a !important;
+      margin-top: 3px !important;
+      padding-right: 0 !important;
+      div {
+        padding-right: 0 !important;
+        position: absolute !important;
+        left: -40px !important;
+        button {
+          svg {
+            fill: #00a3ab !important;
+          }
+        }
+      }
+
+      fieldset {
+        border: none !important;
+      }
+    }
+    div:focused {
+      color: #1a2e4a !important;
+    }
+  }
+}
+.searchWrapperInside4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'FontThin';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #1a2e4a;
+  div {
+    // margin-left: 20px !important;
+
+    label {
+      font-family: 'FontThin' !important;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      font-size: 15px !important;
+      line-height: 20px !important;
+      color: #1a2e4a !important;
+      margin-top: 3px !important;
+    }
+    div {
+      // font-family: 'FontThin' !important;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      font-size: 15px !important;
+      line-height: 20px !important;
+      color: #1a2e4a !important;
+      margin-top: 3px !important;
+
+      fieldset {
+        border: none !important;
+      }
+    }
+    div:focused {
+      color: #1a2e4a !important;
+    }
+  }
 }
 .buttonSearch {
   background: #00a3ab;
   border-radius: 25.5px;
-  font-family: 'Nunito';
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -79,37 +200,64 @@
   align-items: center;
 }
 .boxWrapper {
-  background: #fafafa;
+  background: #fcffff;
   border-radius: 23.4998px;
   padding: 19px;
   display: flex;
   flex-direction: column;
   width: 20vw;
+  box-shadow: 0px 6.71422px 14px rgba(111, 111, 111, 0.24);
+  animation-delay: -1s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.boxWrapper:hover {
+  transform: scale(1.05);
+}
+.prev {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+.next {
+  cursor: pointer;
 }
 .procedures {
   display: flex;
-  margin: 0 7vw;
   justify-content: space-between;
   gap: 10px;
+  margin-bottom: 20px;
+}
+.arrowWrapper {
+  display: flex;
+  gap: 10px;
+  margin: 30px auto 0 auto;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  align-items: center;
+  color: #a9b3b2;
 }
 .boxWrapperTop {
   display: flex;
-  gap: 10px;
+  gap: 15px;
+  align-items: center;
 }
 .operation {
-  font-family: 'Nunito';
+  font-family: 'FontRegular';
   font-style: normal;
   font-weight: 600;
-  font-size: 23.6457px;
-  line-height: 32px;
+  font-size: 18.6457px;
+  line-height: 24px;
   color: #2e384d;
+  margin-bottom: 5px;
 }
 .hospital {
-  font-family: 'Nunito';
+  font-family: 'FontRegular';
   font-style: normal;
   font-weight: 600;
-  font-size: 20.69px;
-  line-height: 28px;
+  font-size: 16.69px;
+  line-height: 24px;
   color: #a9b3b2;
 }
 .longLine {
@@ -119,25 +267,27 @@
   margin: 10px 0;
 }
 .description {
-  font-family: 'Nunito';
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 600;
-  font-size: 20.69px;
-  line-height: 28px;
+  font-size: 14.69px;
+  line-height: 18px;
   color: #2e384d;
   text-transform: capitalize;
+  flex: 1;
 }
 .view {
-  font-family: 'Nunito';
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 400;
-  font-size: 16.749px;
+  font-size: 14.749px;
   line-height: 23px;
   color: #00a3ab;
 }
 .title {
   text-align: center;
   margin-bottom: 20px;
+  font-family: 'FontRegularHead';
 }
 .procedureText {
   text-align: center;
@@ -145,7 +295,7 @@
 }
 .partTwoWrapper {
   background: rgba(255, 255, 255, 0.76);
-  padding: 48px 0;
+  padding: 48px 5vw;
 }
 .departments {
   display: grid;
@@ -155,17 +305,25 @@
   justify-content: center;
 }
 .department {
-  background: #ffffff;
+  box-shadow: 0px 6.71422px 14px rgba(111, 111, 111, 0.24);
+  background: #fcffff;
   border-radius: 16.1957px;
   padding: 26px 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation-delay: -1s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.department:hover {
+  transform: scale(1.05);
 }
 .partThreeWrapper {
-  padding: 80px;
+  padding: 80px 5vw;
 }
 .departmentTitle {
+  font-family: 'FontRegularHead';
   font-weight: 400;
   font-size: 16.1957px;
   line-height: 150%;
@@ -181,16 +339,16 @@
   margin-bottom: 77px;
 }
 .departmentText {
-  font-family: 'Nunito';
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   text-align: center;
   color: #7d889e;
 }
 .hospital {
-  background: #fafafa;
+  background: #fcffff;
   border-radius: 16.1957px;
 }
 .hospitalTitle {
@@ -211,7 +369,8 @@
   padding: 49px 5vw;
 }
 .viewHospital {
-  font-size: 16px;
+  font-family: 'FontThin';
+  font-size: 14px;
   line-height: 30px;
   text-decoration-line: underline;
   color: #00a3ab;
@@ -244,10 +403,10 @@
   border-radius: 39px;
   background: #fafafa;
   border: none;
-  height: 52px;
-  width: 376px;
-  padding-left: 24px;
-  font-family: 'Nunito';
+  height: 42px;
+  width: 14vw;
+  padding-left: 15px;
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -292,19 +451,42 @@
   display: flex;
   margin-left: auto;
 }
+
+.upWrapper {
+  display: flex;
+  gap: 20px;
+}
+.upWrapperInside {
+  display: flex;
+  gap: 20px;
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .next,
+  .prev {
+    width: 20px;
+  }
+  .arrowWrapper {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
   .partOneTop {
     flex-direction: column-reverse;
   }
   .partOneTopRight {
     width: 90%;
   }
+  .partOneTopLeft {
+    width: 100%;
+    margin-top: 20px;
+  }
   .button {
     font-size: 12px;
     line-height: 11px;
     margin: 0 auto;
   }
-  .searchWrapperInside2 {
+  .searchWrapperInside2,
+  .searchWrapperInside3,
+  .searchWrapperInside4 {
     display: none;
   }
   .searchWrapper {
@@ -428,33 +610,71 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .partOneWrapper {
-    padding: 36px 10vw;
+    padding: 36px 5vw;
     gap: 50px;
   }
-  .partOneTop {
-    flex-direction: column-reverse;
-  }
-  .partOneTopLeft {
-    align-items: center;
-    text-align: center;
+  .partOneTopRight {
+    width: 32vw;
   }
   .button {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 13px;
-    padding: 10px 37px;
+    padding: 12px 37px;
   }
   .searchWrapper {
-    padding: 20px;
+    padding: 5px 15px;
+    justify-content: space-between;
   }
+  // .searchWrapperInside {
+  //   min-width: 250px;
+  // }
   .input {
     font-size: 12px;
     line-height: 16px;
     padding-left: 0px;
-    width: 180px;
+    width: 200px;
   }
   .searchWrapperInside2 {
-    padding-left: 10px;
+    padding-left: 0px;
+    div {
+      width: auto;
+      min-width: 90px;
+      label {
+        font-size: 12px !important;
+        line-height: 16px !important;
+      }
+    }
   }
+  .searchWrapperInside3 {
+    padding-left: 0px;
+    div {
+      min-width: 100px;
+      label {
+        font-size: 12px !important;
+        line-height: 16px !important;
+      }
+      div {
+        font-size: 12px !important;
+        line-height: 16px !important;
+      }
+    }
+  }
+  .searchWrapperInside4 {
+    display: none;
+  }
+  .buttonSearch {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    padding: 5px;
+    width: 80px;
+    height: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    img {
+      width: 15px;
+    }
+  }
+
   .partTwoWrapper {
     padding: 36px 5vw;
   }
@@ -526,7 +746,6 @@
   }
   .departments:nth-of-type(3) {
     grid-template-columns: repeat(2, 1fr); /* 2 columns in the last row */
-    background-color: red;
   }
   .partFourWrapper {
     padding: 36px 5vw;

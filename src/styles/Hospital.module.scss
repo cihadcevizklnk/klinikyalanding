@@ -7,36 +7,49 @@
 .hospital {
   display: flex;
   flex-direction: column;
-  background: #fafafa;
+  background: #fcffff;
   border-radius: 16.1957px;
   padding: 20px;
   height: 24em;
-  width: 15vw;
+  width: 17vw;
   align-items: center;
   text-align: center;
   cursor: pointer;
+  box-shadow: 0px 6.71422px 14px rgba(111, 111, 111, 0.24);
+  animation-delay: -1s;
+  transition: 0.5s;
 
   img {
     border-radius: 14px;
-    height: 18vh;
+    // height: 150px;
+    // width: auto;
+    // max-width: 14vw;
     object-fit: contain;
-    background-color: #91d4dd;
   }
+}
+// .deneme {
+//   width: 14vw;
+//   background-color: red;
+//   border-radius: 14px;
+// }
+.hospital:hover {
+  transform: scale(1.05);
 }
 .about {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  font-family: 'Nunito';
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   text-align: center;
   color: #7d889e;
 }
 .hospitalTitle {
+  font-family: 'FontRegularHead';
   font-weight: 400;
   font-size: 17px;
   line-height: 150%;
@@ -97,5 +110,17 @@
     font-size: 14px;
     line-height: 19px;
     text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hospital {
+    width: 30vw;
+    height: 19em;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .hospital {
+    width: 32vw;
+    height: 20em;
   }
 }

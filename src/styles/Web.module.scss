@@ -1,18 +1,26 @@
 .img {
   width: 30vw;
-  height: 16vw;
+  height: 20vw;
 }
 .wrapper {
-  padding: 50px 140px;
+  padding: 50px 100px;
+}
+.text {
+  font-family: 'FontThinHead';
+  margin: 15px 0;
 }
 .center {
   text-align: center;
-  margin-bottom: 24px;
+  width: 60vw;
+  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: center;
 }
 .button {
   background: #00a3ab;
   border-radius: 3px;
   font-size: 16px;
+  font-family: 'FontThin';
   line-height: 25px;
   text-align: center;
   color: #ffffff;
@@ -23,31 +31,115 @@
 .box {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 10vh 0;
-  gap: 5vw;
 
   img {
-    width: 30vw;
-
+    width: 38vw;
     display: flex;
   }
   div {
-    width: 25vw;
+    width: 47vw;
   }
 }
 .box2 {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 10vh 0;
-  gap: 5vw;
   img {
-    width: 30vw;
+    width: 38vw;
   }
   div {
-    width: 25vw;
-    margin-left: 5vw;
+    width: 47vw;
+    margin-left: 3vw;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    padding: 36px 5vw;
+  }
+  .center {
+    width: 100%;
+  }
+  p.center {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .button {
+    font-size: 12px;
+    line-height: 11px;
+    margin: 0 auto;
+  }
+  .box {
+    margin: 20px 0 0 0;
+    flex-direction: column;
+    gap: 15px;
+    img {
+      width: 80vw;
+    }
+    div {
+      width: 80vw;
+    }
+  }
+  .img {
+    height: 200px;
+    object-fit: contain;
+  }
+  .text {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .box2 {
+    margin: 20px 0 0 0;
+    flex-direction: column;
+    gap: 15px;
+    img {
+      width: 80vw;
+    }
+    div {
+      width: 80vw;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    padding: 36px 40px;
+  }
+  .center {
+    width: 80%;
+  }
+  .button {
+    font-size: 14px;
+    line-height: 13px;
+  }
+  .box {
+    margin: 40px 0;
+    gap: 30px;
+    img {
+      width: 60vw;
+    }
+    div {
+      width: 80vw;
+    }
+  }
+  .img {
+    height: 180px;
+    object-fit: contain;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .box2 {
+    margin: 40px 0;
+    gap: 15px;
+    img {
+      width: 60vw;
+    }
+    div {
+      width: 80vw;
+    }
   }
 }

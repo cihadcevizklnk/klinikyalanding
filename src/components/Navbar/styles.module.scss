@@ -1,11 +1,18 @@
 .text {
+  font-family: 'FontRegular';
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   color: #a5a5a5;
 }
-
+.flex {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  width: 100%;
+}
 .active {
+  font-family: 'FontRegular';
   font-size: 16px;
   line-height: 19px;
   color: #184645;
@@ -14,7 +21,7 @@
 }
 .navbar {
   display: flex;
-  padding: 2vw 9vw;
+  padding: 2vw 5vw;
   align-items: center;
   background: #f3fdfe;
 }
@@ -22,28 +29,39 @@
 .list {
   display: flex;
   gap: 3vw;
-  margin: 0 14vw;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   color: #a5a5a5;
+  flex: 1;
+  justify-content: center;
+  margin: 0 auto;
 }
 .signIn {
   background: #00a3ab;
   border-radius: 3px;
   font-size: 16px;
+  font-family: 'FontThin';
   line-height: 25px;
   text-align: center;
   color: #ffffff;
   padding: 6px 36px;
   margin-right: 1vw;
   margin-left: 1vw;
+  min-width: 150px;
 }
 .language {
   font-size: 16px;
   line-height: 19px;
   text-align: right;
   color: #1a2e4a;
+}
+.buttonWrapper {
+  display: flex;
+  min-width: 300px;
+  div {
+    min-width: 50px;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .logo {
@@ -52,17 +70,77 @@
   .active,
   .text {
     font-weight: 300;
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 13px;
+    line-height: 16px;
     text-align: center;
+    padding-bottom: 0px;
   }
   .navbar {
     padding: 2vw 20px;
+    flex-direction: column;
   }
   .list {
-    margin: 0 20px;
+    margin: 0;
+    flex-wrap: wrap;
+    gap: 4vw;
   }
   .signIn {
-    display: none;
+    margin: 20px auto 0 auto;
+    font-size: 12px;
+    line-height: 11px;
+    padding: 6px 16px;
+    min-width: 100px;
+  }
+  .select {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    > div:nth-child(1) {
+      height: 25px;
+      > div:nth-child(3) {
+        height: 25px;
+        min-height: 25px;
+        font-size: 12px;
+        line-height: 14px;
+        > div:nth-child(2) {
+          > div {
+            padding: 2px 8px;
+          }
+        }
+      }
+      > div:nth-child(4) {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .navbar {
+    padding: 2vw 40px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .signIn {
+    font-size: 14px;
+    line-height: 13px;
+    padding: 10px 37px;
+  }
+  .buttonWrapper,
+  .list {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .navbar {
+    display: flex;
+    padding: 2vw 4vw;
+    align-items: center;
+    background: #f3fdfe;
   }
 }

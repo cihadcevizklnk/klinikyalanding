@@ -1,13 +1,22 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { getBlog } from '@/functions';
-import i18n from '../i18n';
+import i18n from '../../i18n';
 import moment from 'moment';
+import styles from '../../styles/SingleBlog.module.scss';
 const BlogDetail = () => {
   const [blog, setBlog] = useState<any>();
   const router = useRouter();
   const language = i18n?.language;
   const { slug } = router.query;
+
+  // useEffect(() => {
+  //   router.beforePopState((state) => {
+  //     state.options.scroll = false;
+  //     return true;
+  //   });
+  // }, [router]);
+
   useEffect(() => {
     getBlog(slug, language, setBlog);
   }, [slug]);
@@ -19,30 +28,48 @@ const BlogDetail = () => {
   useEffect(() => {
     blogText && setKey(Object.keys(blogText));
   }, [blogText]);
-  console.log(blogText, key);
-  key?.map((item: any) => console.log(typeof blogText[item]));
+  const handleNavigate = () => {
+    router.back();
+  };
+
   return (
-    <div>
-      <div>{blog?.Title}</div>
-      <div>
+    <div className={styles.wrapper}>
+      <button onClick={handleNavigate}>
+        <img src="/icons/back icon.svg" alt="back" />
+      </button>
+      <div className={styles.bigTitle}>{blog?.Title}</div>
+      <div className={styles.center}>
         {moment(blog?.CreatedDateTime)
           .locale(language)
           .format('dddd, DD MMMM YYYY')}
       </div>
-      <div>{blog?.CoverImageLocation}</div>
-      <img src={blog?.CoverImageLocation} alt="blog-image" />
+      <img
+        src={blog?.CoverImageLocation}
+        alt="blog-image"
+        className={styles.image}
+      />
       <br />
       {key?.map((item: any) => (
         <div>
           {Array.isArray(blogText[item]) ? (
-            <ul>
+            <ul className={styles.list}>
               {blogText[item]?.map((item: any) => (
                 <li>{item}</li>
               ))}
             </ul>
           ) : (
             <div>
-              <div>{blogText[item]}</div>
+              <div
+                className={
+                  item?.includes('title') && item?.includes('small') === false
+                    ? styles.mediumTitle
+                    : item?.includes('title') && item?.includes('small')
+                    ? styles.smallTitle
+                    : styles.text
+                }
+              >
+                {blogText[item]}
+              </div>
               <br />
             </div>
           )}

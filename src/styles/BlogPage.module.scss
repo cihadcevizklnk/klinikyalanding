@@ -58,26 +58,23 @@
   margin: 20px 2%;
   padding: 10px;
   width: 28%;
-  height: 380px;
+  height: 450px;
   //   height: fit-content;
   background-color: #fcffff;
 }
 
 .left {
-  margin-right: 30px;
 }
 
 .right {
-  margin-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .image {
-  max-width: 355px;
-  max-height: 440px;
-  object-fit: contain;
+  width: 100%;
+  // height: 150px;
   margin: 0 auto;
   display: flex;
 }
@@ -141,14 +138,13 @@
   margin: 20px 2%;
   padding: 10px;
   width: 60%;
-  height: 380px;
+  height: 450px;
   //   height: fit-content;
   background-color: #fcffff;
   .left {
-    height: 380px;
-    width: 50%;
+    width: 200%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    margin-right: 1vw;
   }
 }

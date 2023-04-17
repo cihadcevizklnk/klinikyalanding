@@ -3,7 +3,7 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const CalendarComponent = ({ value, setValue }: any) => {
@@ -93,11 +93,24 @@ const CalendarComponent = ({ value, setValue }: any) => {
     yearLetterSkip: 0,
     isRtl: false,
   };
-
+  const [width, setWidth] = useState<any>();
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  const [valueP, setValueP] = useState<any>(t('SearchBar3'));
+  useEffect(() => {
+    width >= 768 && width < 1024
+      ? setValueP(t('SearchBar3Y'))
+      : setValueP(t('SearchBar3'));
+  }, [width]);
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DatePicker
-        label={t('SearchBar3')}
+        label={valueP}
         value={value}
         onChange={(newValue) => setValue(newValue)}
       />

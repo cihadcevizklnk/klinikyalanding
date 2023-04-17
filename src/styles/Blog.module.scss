@@ -1,6 +1,5 @@
 .blogImg {
   border-radius: 14px;
-  width: 19vw;
   height: 10vw;
   object-fit: contain;
 }
@@ -13,30 +12,38 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0px 6.71422px 14px rgba(111, 111, 111, 0.24);
+  animation-delay: -1s;
+  transition: 0.5s;
+  margin-bottom: 10px;
+}
+.wrapper:hover {
+  transform: scale(1.05);
 }
 .text {
-  font-family: 'Nunito';
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #a9b3b2;
 }
 .time {
-  font-family: 'Nunito';
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 16px;
   color: #a9b3b2;
 }
 .button {
   border: 1px solid #00a3ab;
   border-radius: 3px;
-  font-family: 'Nunito';
+  font-family: 'FontThin';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   text-align: center;
   color: #00a3ab;
@@ -64,5 +71,15 @@
     font-size: 14px;
     line-height: 19px;
     padding: 5px 35px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    width: 40vw;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .wrapper {
+    width: 25vw;
   }
 }

@@ -13,14 +13,14 @@ const Web = () => {
         <img src="/icons/Frame 140.svg" alt="computer" className={styles.img} />
         <div>
           <h2>{t('wtitle2')}</h2>
-          <p>{t('wtext2')}</p>
+          <p className={styles.text}>{t('wtext2')}</p>
         </div>
       </section>
       <section className={styles.box2}>
         <img src="/icons/Frame 142.svg" alt="phone" className={styles.img} />
         <div>
           <h2>{t('wtitle3')}</h2>
-          <p>{t('wtext3')}</p>
+          <p className={styles.text}>{t('wtext3')}</p>
         </div>
       </section>
       <section className={styles.box}>
@@ -31,7 +31,7 @@ const Web = () => {
         />
         <div>
           <h2>{t('wtitle4')}</h2>
-          <p>{t('wtext4')}</p>
+          <p className={styles.text}>{t('wtext4')}</p>
         </div>
       </section>
       <section className={styles.box2}>
@@ -42,7 +42,7 @@ const Web = () => {
         />
         <div>
           <h2>{t('wtitle5')}</h2>
-          <p>{t('wtext5')}</p>
+          <p className={styles.text}>{t('wtext5')}</p>
         </div>
       </section>
       <section className={styles.box}>
@@ -53,7 +53,7 @@ const Web = () => {
         />
         <div>
           <h2>{t('wtitle6')}</h2>
-          <p>{t('wtext6')}</p>
+          <p className={styles.text}>{t('wtext6')}</p>
         </div>
       </section>
     </div>

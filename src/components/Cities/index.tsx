@@ -36,9 +36,23 @@ const Cities = ({
     }
     return acc;
   }, new Map());
+  const [width, setWidth] = useState<any>();
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  const [valueP, setValueP] = useState<any>(t('SearchBar2'));
+  useEffect(() => {
+    width >= 768 && width < 1024
+      ? setValueP(t('SearchBar2Y'))
+      : setValueP(t('SearchBar2'));
+  }, [width]);
   return (
     <FormControl sx={{ minWidth: 210 }}>
-      <InputLabel>{t('SearchBar2')}</InputLabel>
+      <InputLabel>{valueP}</InputLabel>
       <Select
         autoWidth
         label={t('Location')}

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import styles from '../../styles/Blog.module.scss';
 import moment from 'moment';
-import i18n from '@/pages/i18n';
+import i18n from '../../i18n';
 import { useTranslation } from 'react-i18next';
-
+import Link from 'next/link';
 const Blog = ({ item }: any) => {
   const [src, setSrc] = useState<any>();
   const [control, setControl] = useState<any>();
@@ -13,7 +13,7 @@ const Blog = ({ item }: any) => {
   };
   const { t } = useTranslation();
   return (
-    <div className={styles.wrapper}>
+    <Link href={`/blog/${item.Id}`} className={styles.wrapper}>
       <img
         src={
           src && control === item?.Id
@@ -32,9 +32,14 @@ const Blog = ({ item }: any) => {
           ?.format('ddd DD, MM')}
       </p>
       <h3>{item?.Title}</h3>
-      <p className={styles.text}>{item?.ShortText?.slice(0, 300)}...</p>
-      <button className={styles.button}>{t('read')}</button>
-    </div>
+      <p className={styles.text}>
+        {item?.ShortText?.slice(0, 300)
+          .replaceAll('\\n', ' ')
+          .replaceAll('\\', ' ')}
+        ...
+      </p>
+      <div className={styles.button}>{t('read')}</div>
+    </Link>
   );
 };
 export default Blog;
