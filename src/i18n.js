@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   tr: {
     translation: {
+      logIn: 'Giriş Yap',
       application: 'Uygulama',
       web: 'Yazılım Geliştirme',
       professional: 'Profesyoneller',
@@ -168,6 +169,8 @@ const resources = {
   },
   en: {
     translation: {
+      SearchBar2Y: 'Choose a Location',
+      SearchBar3Y: 'Choose a Date',
       application: 'Application',
       web: 'Software Development,',
       professional: 'Professionals',
@@ -329,6 +332,8 @@ const resources = {
   },
   ru: {
     translation: {
+      SearchBar2Y: 'Местоположение выберите',
+      SearchBar3Y: 'Выберите дату ',
       application: 'Приложение',
       web: 'Разработка программного обеспечения',
       professional: 'Профессионалы',
@@ -490,6 +495,8 @@ const resources = {
   },
   de: {
     translation: {
+      SearchBar2Y: 'Wählen Sie einen Ort',
+      SearchBar3Y: 'Wählen Sie ein Datum',
       application: 'Anwendung',
       web: 'Softwareentwicklung',
       professional: 'Profis',
@@ -651,6 +658,8 @@ const resources = {
   },
   ar: {
     translation: {
+      SearchBar2Y: 'اختر موقع',
+      SearchBar3Y: 'اختر موعد',
       application: 'تطبيق',
       web: 'تطوير البرمجيات،',
       professional: 'الأخصائيين ',

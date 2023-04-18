@@ -173,7 +173,15 @@ export default function Home({ targetRef }: any) {
       `http://klinik.klinikya.com/hospital-details?obj=${encodedObj}`
     );
   };
-  console.log(targetRef, 'esraxs');
+
+  const videoRef = useRef<any>(null);
+  const handlePause = () => {
+    videoRef.current.pause();
+  };
+  const handlePlay = () => {
+    videoRef.current.play();
+  };
+
   return (
     <>
       <Head>
@@ -203,11 +211,25 @@ export default function Home({ targetRef }: any) {
                 {t('button')}
               </button>
             </div>
-            <img
+            {/* <img
               src="/icons/gif3.gif"
               alt=""
               className={styles.partOneTopRight}
-            />
+            /> */}
+            <div
+              className={styles.partOneTopRight}
+              onMouseDown={handlePause}
+              onMouseUp={handlePlay}
+            >
+              <video
+                src="/video.mp4"
+                autoPlay
+                loop
+                muted
+                width={'100%'}
+                ref={videoRef}
+              ></video>
+            </div>
             {/* <div className={styles.upWrapper}>
               <img
                 src="/icons/next.svg"

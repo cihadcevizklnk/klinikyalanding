@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 50px 140px;
+  padding: 50px 5vw;
 }
 .center {
   text-align: center;
@@ -92,7 +92,7 @@
   line-height: 30px;
   color: var(--fontDark);
   margin-top: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .btn {
@@ -146,5 +146,76 @@
     display: flex;
     justify-content: center;
     margin-right: 1vw;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    padding: 36px 5vw;
+  }
+  .button {
+    font-size: 12px;
+    line-height: 11px;
+    padding: 10px 16px;
+  }
+  .blocks {
+    flex-direction: column;
+  }
+  .blockInsideBig,
+  .blocksInside {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blockInsideBig {
+    flex-direction: column;
+    .left {
+      width: auto;
+      max-height: 250px;
+    }
+  }
+  .blocksInside {
+    .left {
+      width: auto;
+      img {
+        max-height: 250px;
+      }
+    }
+  }
+  .blockTitle {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  .btn {
+    height: 25px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .blockInsideBig,
+  .blocksInside {
+    width: 45%;
+    min-width: 300px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blockInsideBig {
+    flex-direction: column;
+    .left {
+      width: auto;
+      max-height: 250px;
+    }
+  }
+  .blocksInside {
+    .left {
+      width: auto;
+      img {
+        max-height: 250px;
+      }
+    }
   }
 }

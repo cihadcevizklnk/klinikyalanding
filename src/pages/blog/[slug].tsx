@@ -35,7 +35,7 @@ const BlogDetail = () => {
   return (
     <div className={styles.wrapper}>
       <button onClick={handleNavigate}>
-        <img src="/icons/back icon.svg" alt="back" />
+        <img src="/icons/back icon.svg" alt="back" className={styles.icon} />
       </button>
       <div className={styles.bigTitle}>{blog?.Title}</div>
       <div className={styles.center}>

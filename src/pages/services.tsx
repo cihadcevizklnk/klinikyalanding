@@ -18,7 +18,7 @@ const Services = () => {
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.center}>{t('htitle1')}</h1>
-      <p className={styles.center}>{t('htext1')}</p>
+      <p className={styles.center2}>{t('htext1')}</p>
       <div>
         <video
           src="/Klinikya_App_Launch_1.mp4"

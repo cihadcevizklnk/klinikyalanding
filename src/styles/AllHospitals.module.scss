@@ -3,7 +3,7 @@
   grid-template-columns: repeat(4, auto);
   row-gap: 30px;
   column-gap: 50px;
-  padding: 50px 140px;
+  padding: 50px 5vw;
   margin-bottom: 20px;
 }
 .imageHospital {
@@ -82,4 +82,80 @@
 }
 .icon {
   margin-left: 140px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .icon {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 8vw;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 5vw;
+  }
+  .boxWrapper {
+    width: 100%;
+  }
+  .imageHospital {
+    width: 60px;
+  }
+  .operation {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .hospital,
+  .description,
+  .view {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .title {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .icon {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 4vw;
+    max-width: 40px;
+  }
+  .wrapper {
+    padding: 36px 5vw;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+  .wrapper > div {
+    width: auto;
+    max-width: 350px;
+    div {
+      img {
+        height: 6vh;
+      }
+    }
+  }
+  .title {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .icon {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 4vw;
+    max-width: 40px;
+  }
+  .wrapper {
+    padding: 36px 5vw;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+  }
+  .boxWrapper {
+    width: 27vw;
+  }
+  .wrapper > div {
+    width: 27vw;
+    height: 19em;
+  }
 }

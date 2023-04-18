@@ -39,15 +39,29 @@ const Navbar = ({ clicked, setClicked }: any) => {
         break;
     }
   }
-
+  const languageOption =
+    language === 'tr'
+      ? '/icons/turkey.svg'
+      : language === 'de'
+      ? '/icons/german.svg'
+      : language === 'ru'
+      ? '/icons/russia.svg'
+      : language === 'ar'
+      ? '/icons/arabic.svg'
+      : language === 'en'
+      ? '/icons/england.svg'
+      : '/icons/back icon.svg';
   const [value, setValue] = useState<any>();
   const handleChangeLanguage = (val: any) => {
     i18n.changeLanguage(val);
     setValue(val);
   };
   const router = useRouter();
+  const handleApp2 = () => {
+    router.push('http://klinik.klinikya.com/sign-in?global=true');
+  };
   const handleApp = () => {
-    router.push('http://klinik.klinikya.com/?start=landing');
+    router.push('http://klinik.klinikya.com/sign-up?global=true');
   };
   const [width, setWidth] = useState<any>();
   useEffect(() => {
@@ -61,6 +75,11 @@ const Navbar = ({ clicked, setClicked }: any) => {
   useEffect(() => {
     width < 768 && setShow(false);
   }, [width]);
+  const [showList, setShowList] = useState(false);
+  const handleLanguage = (el: string) => {
+    i18n.changeLanguage(el);
+    setShowList(false);
+  };
   return (
     <nav className={styles.navbar}>
       <img
@@ -68,7 +87,7 @@ const Navbar = ({ clicked, setClicked }: any) => {
         alt="klinikya"
         className={styles.logo}
       />
-      {width < 768 && (
+      {/* {width < 768 && (
         <div className={styles.select}>
           <Select
             options={options}
@@ -76,6 +95,26 @@ const Navbar = ({ clicked, setClicked }: any) => {
             onChange={(val: any) => handleChangeLanguage(val.value)}
             placeholder={t('language')}
           />
+        </div>
+      )} */}
+      {width < 768 && (
+        <div className={styles.languageWrapper}>
+          <img
+            className={styles.languageWrapperInside}
+            src={languageOption}
+            alt="language"
+            onClick={() => setShowList(!showList)}
+          />
+
+          {showList && (
+            <ul className={styles.languageList}>
+              <li onClick={() => handleLanguage('tr')}>{t('turkish')}</li>
+              <li onClick={() => handleLanguage('en')}>{t('english')}</li>
+              <li onClick={() => handleLanguage('de')}>{t('deutch')}</li>
+              <li onClick={() => handleLanguage('ar')}>{t('arabic')}</li>
+              <li onClick={() => handleLanguage('ru')}>{t('russian')}</li>
+            </ul>
+          )}
         </div>
       )}
       <div className={styles.flex}>
@@ -122,15 +161,36 @@ const Navbar = ({ clicked, setClicked }: any) => {
           <button className={styles.signIn} onClick={handleApp}>
             {t('signIn')}
           </button>
-          {show && (
-            <Select
-              options={options}
-              value={{ value: DefaultValue(), label: DefaultValue() }}
-              onChange={(val: any) => handleChangeLanguage(val.value)}
-              placeholder={t('language')}
-            />
-          )}
+          <button className={styles.logIn} onClick={handleApp2}>
+            {t('logIn')}
+          </button>
         </div>
+        {show && (
+          // <Select
+          //   options={options}
+          //   value={{ value: DefaultValue(), label: DefaultValue() }}
+          //   onChange={(val: any) => handleChangeLanguage(val.value)}
+          //   placeholder={t('language')}
+          // />
+          <div className={styles.languageWrapper}>
+            <img
+              className={styles.languageWrapperInside}
+              src={languageOption}
+              alt="language"
+              onClick={() => setShowList(!showList)}
+            />
+
+            {showList && (
+              <ul className={styles.languageList}>
+                <li onClick={() => handleLanguage('tr')}>{t('turkish')}</li>
+                <li onClick={() => handleLanguage('en')}>{t('english')}</li>
+                <li onClick={() => handleLanguage('de')}>{t('deutch')}</li>
+                <li onClick={() => handleLanguage('ar')}>{t('arabic')}</li>
+                <li onClick={() => handleLanguage('ru')}>{t('russian')}</li>
+              </ul>
+            )}
+          </div>
+        )}
       </div>
     </nav>
   );
