@@ -222,7 +222,18 @@ export default function Home({ targetRef }: any) {
               onMouseUp={handlePlay}
             >
               <video
-                src="/video.mp4"
+                // src="/video.mp4"
+                src={
+                  language === 'en'
+                    ? '/video.mp4'
+                    : language === 'ru'
+                    ? '/RUSÇA.mp4'
+                    : language === 'de'
+                    ? '/ALMANCA.mp4'
+                    : language === 'ar'
+                    ? '/ARAPÇA.mp4'
+                    : '/video_tr.mp4'
+                }
                 autoPlay
                 loop
                 muted
