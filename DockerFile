@@ -32,5 +32,4 @@ COPY --from=builder /app/.next ./.next
 
 # USER nextjs
 
-EXPOSE 80
 ENTRYPOINT ["npm", "run","start"]
