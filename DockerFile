@@ -32,6 +32,5 @@ COPY --from=builder /app/.next ./.next
 
 # USER nextjs
 
-EXPOSE 80
-ENV PORT 80
+EXPOSE 443
 ENTRYPOINT ["npm", "run","start"]
