@@ -14,7 +14,7 @@ variables:
   imageRepository: 'klinikyalandingnext'
   containerRegistry: 'klinikyalanding.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/DockerFile'
-  tag: '$(Build.BuildId)'
+  tag: 'latest'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
