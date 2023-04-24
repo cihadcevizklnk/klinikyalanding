@@ -25,7 +25,7 @@ export const getProcedures = (setArr: any) => {
   };
 
   fetch(
-    'https://klinikya-new-dev.azurewebsites.net/api/ReadyMadeProcedure/get-all-ready-made-procedures',
+    'https://klinikya-api.azurewebsites.net/api/ReadyMadeProcedure/get-all-ready-made-procedures',
     requestOptions
   )
     .then((response) => response.json())
@@ -87,7 +87,7 @@ export const getHospitals = (setArr: any) => {
   };
 
   fetch(
-    'https://klinikya-new-dev.azurewebsites.net/api/HospitalAdmin/get-all-hospitals',
+    'https://klinikya-api.azurewebsites.net/api/HospitalAdmin/get-all-hospitals',
     requestOptions
   )
     .then((response) => response.json())
@@ -116,7 +116,7 @@ export const getCities = (setArr: any) => {
   };
 
   fetch(
-    'https://klinikya-new-dev.azurewebsites.net/api/Information/get-city-districts',
+    'https://klinikya-api.azurewebsites.net/api/Information/get-city-districts',
     requestOptions
   )
     .then((response) => response.json())
@@ -139,7 +139,7 @@ export const getBlog = (id: any, locale: any, setArr: any) => {
   };
 
   fetch(
-    `https://klinikya-new-dev.azurewebsites.net/api/Data/get-blog?id=${id}&locale=${locale}`,
+    `https://klinikya-api.azurewebsites.net/api/Data/get-blog?id=${id}&locale=${locale}`,
     requestOptions
   )
     .then((response) => response.json())

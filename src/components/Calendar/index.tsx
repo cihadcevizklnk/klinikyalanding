@@ -101,16 +101,13 @@ const CalendarComponent = ({ value, setValue }: any) => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  const [valueP, setValueP] = useState<any>(t('SearchBar3'));
-  useEffect(() => {
-    width >= 768 && width < 1024
-      ? setValueP(t('SearchBar3Y'))
-      : setValueP(t('SearchBar3'));
-  }, [width]);
+
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DatePicker
-        label={valueP}
+        label={
+          width >= 768 && width < 1024 ? t('SearchBar3Y') : t('SearchBar3')
+        }
         value={value}
         onChange={(newValue) => setValue(newValue)}
       />
