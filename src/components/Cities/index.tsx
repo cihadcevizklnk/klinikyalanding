@@ -44,15 +44,12 @@ const Cities = ({
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  const [valueP, setValueP] = useState<any>(t('SearchBar2'));
-  useEffect(() => {
-    width >= 768 && width < 1024
-      ? setValueP(t('SearchBar2Y'))
-      : setValueP(t('SearchBar2'));
-  }, [width]);
+
   return (
     <FormControl sx={{ minWidth: 210 }}>
-      <InputLabel>{valueP}</InputLabel>
+      <InputLabel>
+        {width >= 768 && width < 1024 ? t('SearchBar2Y') : t('SearchBar2')}
+      </InputLabel>
       <Select
         autoWidth
         label={t('Location')}

@@ -169,6 +169,8 @@ const resources = {
   },
   en: {
     translation: {
+      showAllProcedures: 'Show all health packages',
+      logIn: 'Login',
       SearchBar2Y: 'Choose a Location',
       SearchBar3Y: 'Choose a Date',
       application: 'Application',
@@ -332,6 +334,8 @@ const resources = {
   },
   ru: {
     translation: {
+      showAllProcedures: 'Показать все пакеты здоровья',
+      logIn: 'войти',
       SearchBar2Y: 'Местоположение выберите',
       SearchBar3Y: 'Выберите дату ',
       application: 'Приложение',
@@ -495,6 +499,8 @@ const resources = {
   },
   de: {
     translation: {
+      showAllProcedures: 'Alle Gesundheitspakete anzeigen',
+      logIn: 'Anmelden',
       SearchBar2Y: 'Wählen Sie einen Ort',
       SearchBar3Y: 'Wählen Sie ein Datum',
       application: 'Anwendung',
@@ -658,6 +664,8 @@ const resources = {
   },
   ar: {
     translation: {
+      showAllProcedures: 'عرض كل العروض الصحية',
+      logIn: 'تسجيل الدخول',
       SearchBar2Y: 'اختر موقع',
       SearchBar3Y: 'اختر موعد',
       application: 'تطبيق',

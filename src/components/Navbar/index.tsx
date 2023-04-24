@@ -82,11 +82,14 @@ const Navbar = ({ clicked, setClicked }: any) => {
   };
   return (
     <nav className={styles.navbar}>
-      <img
-        src="/icons/klinikyaLogo.svg"
-        alt="klinikya"
-        className={styles.logo}
-      />
+      <Link href="/" onClick={() => setClicked(1)}>
+        <img
+          src="/icons/klinikyaLogo.svg"
+          alt="klinikya"
+          className={styles.logo}
+        />
+      </Link>
+
       {/* {width < 768 && (
         <div className={styles.select}>
           <Select
@@ -182,11 +185,11 @@ const Navbar = ({ clicked, setClicked }: any) => {
 
             {showList && (
               <ul className={styles.languageList}>
-                <li onClick={() => handleLanguage('tr')}>{t('turkish')}</li>
-                <li onClick={() => handleLanguage('en')}>{t('english')}</li>
-                <li onClick={() => handleLanguage('de')}>{t('deutch')}</li>
-                <li onClick={() => handleLanguage('ar')}>{t('arabic')}</li>
-                <li onClick={() => handleLanguage('ru')}>{t('russian')}</li>
+                <li onClick={() => handleLanguage('tr')}>Türkçe</li>
+                <li onClick={() => handleLanguage('en')}>English</li>
+                <li onClick={() => handleLanguage('de')}>Deutsch</li>
+                <li onClick={() => handleLanguage('ar')}>العربية</li>
+                <li onClick={() => handleLanguage('ru')}>Русский</li>
               </ul>
             )}
           </div>
