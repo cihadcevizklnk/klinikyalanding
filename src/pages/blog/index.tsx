@@ -11,10 +11,11 @@ import SingleBlog from '@/components/SingleBlog';
 const Blog = () => {
   const { t } = useTranslation();
   const [blogs, setBlogs] = useState<any>();
+  const language = i18n.language;
 
   useEffect(() => {
-    getBlogs(setBlogs);
-  }, []);
+    getBlogs(setBlogs, language);
+  }, [language]);
   const router = useRouter();
   const handleApp = () => {
     router.push(`http://klinik.klinikya.com/?start=landing`);

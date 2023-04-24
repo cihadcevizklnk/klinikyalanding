@@ -9,7 +9,7 @@ const AllHealthPackages = () => {
   const router = useRouter();
   const language = i18n.language;
   useEffect(() => {
-    getProcedures(setData);
+    getProcedures(setData, language);
   }, [language]);
 
   const { t } = useTranslation();

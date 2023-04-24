@@ -20,8 +20,8 @@ const AllHospitals = () => {
     );
   };
   useEffect(() => {
-    getHospitals(setData);
-  }, []);
+    getHospitals(setData, language);
+  }, [language]);
 
   const [data, setData] = useState<any>();
   const handleNavigate = () => {
