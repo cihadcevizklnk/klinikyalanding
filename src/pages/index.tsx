@@ -47,12 +47,13 @@ export default function Home({ targetRef }: any) {
   const [key, setKey] = useState(Date.now());
   const { t } = useTranslation();
   console.log(key, 'key');
-  useEffect(() => {
-    getProcedures(setProcedures);
-    getBlogs(setBlogs);
-    getHospitals(setHospitals);
-  }, []);
   const language = i18n.language;
+  useEffect(() => {
+    getProcedures(setProcedures, language);
+    getBlogs(setBlogs, language);
+    getHospitals(setHospitals, language);
+  }, [language]);
+
   const hospitalArr = hospitals?.filter(
     (item: any) =>
       item?.Id === 5 ||

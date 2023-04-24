@@ -1,7 +1,8 @@
+import { useEffect } from 'react';
 import i18n from '../i18n';
 import { useTranslation } from 'react-i18next';
 
-export const getProcedures = (setArr: any) => {
+export const getProcedures = (setArr: any, language: string) => {
   const myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
   myHeaders.append('Accept', 'text/plain');
@@ -12,7 +13,7 @@ export const getProcedures = (setArr: any) => {
   );
 
   const raw = JSON.stringify({
-    locale: i18n.language,
+    locale: language,
     pageSize: 100,
     page: 0,
   });
@@ -33,7 +34,7 @@ export const getProcedures = (setArr: any) => {
     .catch((error) => console.log('error', error));
 };
 
-export const getBlogs = (setArr: any) => {
+export const getBlogs = (setArr: any, language: string) => {
   const myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
   myHeaders.append('Accept', 'text/plain');
@@ -44,7 +45,7 @@ export const getBlogs = (setArr: any) => {
   );
 
   const raw = JSON.stringify({
-    locale: i18n.language,
+    locale: language,
     pageSize: 100,
     page: 0,
   });
@@ -64,7 +65,7 @@ export const getBlogs = (setArr: any) => {
     .then((res) => setArr(res?.Items))
     .catch((error) => console.log('error', error));
 };
-export const getHospitals = (setArr: any) => {
+export const getHospitals = (setArr: any, language: string) => {
   const myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
   myHeaders.append('Accept', 'text/plain');
@@ -74,7 +75,7 @@ export const getHospitals = (setArr: any) => {
   );
 
   const raw = JSON.stringify({
-    locale: 'tr',
+    locale: language,
     pageSize: 17583011,
     page: 0,
   });
@@ -94,7 +95,7 @@ export const getHospitals = (setArr: any) => {
     .then((res) => setArr(res?.Items))
     .catch((error) => console.log('error', error));
 };
-export const getCities = (setArr: any) => {
+export const getCities = (setArr: any, language: string) => {
   const myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
   myHeaders.append('Accept', 'text/plain');
@@ -104,7 +105,7 @@ export const getCities = (setArr: any) => {
   );
 
   const raw = JSON.stringify({
-    locale: 'tr',
+    locale: language,
     isActive: true,
   });
 

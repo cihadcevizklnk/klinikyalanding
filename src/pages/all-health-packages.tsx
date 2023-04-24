@@ -7,12 +7,13 @@ import { useRouter } from 'next/router';
 const AllHealthPackages = () => {
   const [data, setData] = useState<any>();
   const router = useRouter();
+  const language = i18n.language;
   useEffect(() => {
     getProcedures(setData);
-  }, []);
-  console.log(data, 'esra');
+  }, [language]);
+
   const { t } = useTranslation();
-  const language = i18n.language;
+
   const handleApp2 = (e: any) => {
     const myObj = {
       procedures: e,
