@@ -29,7 +29,7 @@ export default function Home({ targetRef }: any) {
       language: language,
     };
     const encodedObj = encodeURIComponent(JSON.stringify(myObj));
-    router.push(`http://klinik.klinikya.com/global-search?obj=${encodedObj}`);
+    router.push(`http://portal.klinikya.com/global-search?obj=${encodedObj}`);
   };
 
   const [procedures, setProcedures] = useState<any>();
@@ -97,10 +97,10 @@ export default function Home({ targetRef }: any) {
       department: true,
     };
     const encodedObj = encodeURIComponent(JSON.stringify(myObj));
-    router.push(`http://klinik.klinikya.com/global-search?obj=${encodedObj}`);
+    router.push(`http://portal.klinikya.com/global-search?obj=${encodedObj}`);
   };
   const handleApp = () => {
-    router.push(`http://klinik.klinikya.com/?start=landing`);
+    router.push(`http://portal.klinikya.com/?start=landing`);
   };
   const handleApp2 = (e: any) => {
     const myObj = {
@@ -109,7 +109,7 @@ export default function Home({ targetRef }: any) {
     };
     const encodedObj = encodeURIComponent(JSON.stringify(myObj));
     router.push(
-      `http://klinik.klinikya.com/global-ready-made-procedure?obj=${encodedObj}`
+      `http://portal.klinikya.com/global-ready-made-procedure?obj=${encodedObj}`
     );
   };
   const [startP, setStartP] = useState<any>(0);
@@ -171,7 +171,7 @@ export default function Home({ targetRef }: any) {
     };
     const encodedObj = encodeURIComponent(JSON.stringify(myObj));
     router.push(
-      `http://klinik.klinikya.com/hospital-details?obj=${encodedObj}`
+      `http://portal.klinikya.com/hospital-details?obj=${encodedObj}`
     );
   };
 

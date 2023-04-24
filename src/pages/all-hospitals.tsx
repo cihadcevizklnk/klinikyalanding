@@ -16,7 +16,7 @@ const AllHospitals = () => {
     };
     const encodedObj = encodeURIComponent(JSON.stringify(myObj));
     router.push(
-      `http://klinik.klinikya.com/hospital-details?obj=${encodedObj}`
+      `http://portal.klinikya.com/hospital-details?obj=${encodedObj}`
     );
   };
   useEffect(() => {

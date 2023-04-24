@@ -21,7 +21,7 @@ const AllHealthPackages = () => {
     };
     const encodedObj = encodeURIComponent(JSON.stringify(myObj));
     router.push(
-      `http://klinik.klinikya.com/global-ready-made-procedure?obj=${encodedObj}`
+      `http://portal.klinikya.com/global-ready-made-procedure?obj=${encodedObj}`
     );
   };
   const handleNavigate = () => {

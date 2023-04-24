@@ -18,7 +18,7 @@ const Blog = () => {
   }, [language]);
   const router = useRouter();
   const handleApp = () => {
-    router.push(`http://klinik.klinikya.com/?start=landing`);
+    router.push(`http://portal.klinikya.com/?start=landing`);
   };
   const [scrollPosition, setScrollPosition] = useState<any>(0);
   useEffect(() => {
