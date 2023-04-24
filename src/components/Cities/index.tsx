@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import MenuItem from '@mui/material/MenuItem';
 import { InputLabel } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
+import i18n from '@/i18n';
 const Cities = ({
   setChoosenDistrictId,
   setChoosenLocation,
@@ -14,10 +15,10 @@ const Cities = ({
 }: any) => {
   const [cities, setCities] = useState<any>();
   const { t } = useTranslation();
-
+  const language = i18n.language;
   useEffect(() => {
-    getCities(setCities);
-  }, []);
+    getCities(setCities, language);
+  }, [language]);
   const handleLocationChange = (event: any) => {
     const value = JSON.parse(event.target.value);
 
