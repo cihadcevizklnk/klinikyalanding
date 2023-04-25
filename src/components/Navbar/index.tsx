@@ -84,8 +84,15 @@ const Navbar = ({ clicked, setClicked }: any) => {
     i18n.changeLanguage(el);
     setShowList(false);
   };
+
   return (
-    <nav className={styles.navbar}>
+    <nav
+      className={
+        router?.pathname?.includes('payment-control')
+          ? styles.none
+          : styles.navbar
+      }
+    >
       <Link href="/" onClick={() => setClicked(1)}>
         <img
           src="/icons/klinikyaLogo.svg"

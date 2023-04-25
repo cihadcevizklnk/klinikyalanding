@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import styles from '../../styles/Footer.module.scss';
 import { useRef } from 'react';
+import { useRouter } from 'next/router';
 const Footer = ({ clicked, setClicked }: any) => {
   const { t } = useTranslation();
   function handleCategory(categoryRef: any, e: any) {
@@ -17,9 +18,15 @@ const Footer = ({ clicked, setClicked }: any) => {
     document.body.scrollTop = 0;
   };
   const targetRef = useRef(null);
-
+  const router = useRouter();
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={
+        router?.pathname?.includes('/payment-control')
+          ? styles.none
+          : styles.footer
+      }
+    >
       <section className={styles.footerLeft}>
         <img src="/icons/klinikyaLogo.svg" alt="klinikya" />
         <p>{t('FooterText')}</p>
