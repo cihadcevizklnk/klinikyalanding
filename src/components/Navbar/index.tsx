@@ -58,10 +58,14 @@ const Navbar = ({ clicked, setClicked }: any) => {
   };
   const router = useRouter();
   const handleApp2 = () => {
-    router.push('http://portal.klinikya.com/sign-in?global=true');
+    router.push(
+      `http://portal.klinikya.com/sign-in?global=true?language=${language}`
+    );
   };
   const handleApp = () => {
-    router.push('http://portal.klinikya.com/sign-up?global=true');
+    router.push(
+      `http://portal.klinikya.com/sign-up?global=true?language=${language}`
+    );
   };
   const [width, setWidth] = useState<any>();
   useEffect(() => {
