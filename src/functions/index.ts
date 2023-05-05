@@ -140,7 +140,7 @@ export const getBlog = (id: any, locale: any, setArr: any) => {
   };
 
   fetch(
-    `https://klinikya-api.azurewebsites.net/api/Data/get-blog?id=${id}&locale=${locale}`,
+    `https://klinikya-new-dev.azurewebsites.net/api/Data/get-blog?id=${id}&locale=${locale}`,
     requestOptions
   )
     .then((response) => response.json())
