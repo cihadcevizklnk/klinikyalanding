@@ -84,7 +84,32 @@ export default function Home({ targetRef }: any) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const departments = useRef(null);
+  const departments: any = useRef(null);
+  const [category, setCategory] = useState<any>('');
+
+  useEffect(() => {
+    console.log(category, 'ea');
+    if (typeof window !== 'undefined') {
+      setCategory(localStorage.getItem('category'));
+      console.log('girdi1');
+    }
+    if (localStorage.getItem('category') == 'departments') {
+      console.log('girdi');
+      departments.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+        inline: 'nearest',
+      });
+    }
+  }, [category]);
+
+  useEffect(() => {
+    if (localStorage.getItem('category') != '') {
+      setTimeout(() => {
+        localStorage.setItem('category', '');
+      }, 5000);
+    }
+  }, [category]);
   const handleChange = useCallback(() => {
     setVideoVisit(!videoVisit);
   }, [videoVisit]);
@@ -100,7 +125,9 @@ export default function Home({ targetRef }: any) {
     router.push(`http://portal.klinikya.com/global-search?obj=${encodedObj}`);
   };
   const handleApp = () => {
-    router.push(`http://portal.klinikya.com/?start=landing`);
+    router.push(
+      `http://portal.klinikya.com/?start=landing?language=${language}`
+    );
   };
   const handleApp2 = (e: any) => {
     const myObj = {
@@ -182,7 +209,7 @@ export default function Home({ targetRef }: any) {
   const handlePlay = () => {
     videoRef.current.play();
   };
-  console.log(startP, endP, procedures?.length, 'esra');
+
   return (
     <>
       <Head>

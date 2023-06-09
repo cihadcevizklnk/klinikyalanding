@@ -31,6 +31,7 @@ const BlogDetail = () => {
   const handleNavigate = () => {
     router.back();
   };
+  console.log(blogText, 'esra');
 
   return (
     <div className={styles.wrapper}>
@@ -49,11 +50,11 @@ const BlogDetail = () => {
         className={styles.image}
       />
       <br />
-      {key?.map((item: any) => (
+      {blogText?.map((item: any) => (
         <div>
-          {Array.isArray(blogText[item]) ? (
+          {item['type'].includes('arr') ? (
             <ul className={styles.list}>
-              {blogText[item]?.map((item: any) => (
+              {item['arr']?.map((item: any) => (
                 <li>{item}</li>
               ))}
             </ul>
@@ -61,14 +62,17 @@ const BlogDetail = () => {
             <div>
               <div
                 className={
-                  item?.includes('title') && item?.includes('small') === false
+                  item?.['type'].includes('title') &&
+                  item?.['type'].includes('small') === false
                     ? styles.mediumTitle
-                    : item?.includes('title') && item?.includes('small')
+                    : item?.['type'].includes('title') &&
+                      item?.['type'].includes('small')
                     ? styles.smallTitle
                     : styles.text
                 }
               >
-                {blogText[item]}
+                {item['type'] == 'smalltitle' && item['smalltitle']}
+                {item['type'] == 'text' && item['text']}
               </div>
               <br />
             </div>

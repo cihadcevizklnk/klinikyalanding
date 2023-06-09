@@ -15,7 +15,7 @@ const PaymentControl = () => {
 
   async function CapturMokaPayment(OtherTrxCode: any) {
     try {
-      const url = `https://klinikya-new-dev.azurewebsites.net/api/Appointment/capture-moka-payment?OtherTrxCode=${OtherTrxCode}`;
+      const url = `https://klinikya-api.azurewebsites.net/api/Appointment/capture-moka-payment?OtherTrxCode=${OtherTrxCode}`;
       axios.post(url).then((res) => {
         if (res.data.Code == 1) {
           setResult(res.data);

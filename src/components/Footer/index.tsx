@@ -3,10 +3,12 @@ import { useTranslation } from 'react-i18next';
 import styles from '../../styles/Footer.module.scss';
 import { useRef } from 'react';
 import { useRouter } from 'next/router';
+
 const Footer = ({ clicked, setClicked }: any) => {
   const { t } = useTranslation();
   function handleCategory(categoryRef: any, e: any) {
-    setClicked(e);
+    localStorage.setItem('category', categoryRef);
+    clicked != e && setClicked(e);
     categoryRef.current?.scrollIntoView({
       behavior: 'smooth',
       block: 'end',
