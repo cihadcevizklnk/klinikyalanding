@@ -7,7 +7,7 @@ import { useRef, useEffect } from 'react';
 const SingleBlog = ({ item, i, handleClickBlog }: any) => {
   const language = i18n?.language;
   function decodeHtmlCharCodes(str: string) {
-    return str.replace(/(&#(\d+);)/g, function (match, capture, charCode) {
+    return str?.replace(/(&#(\d+);)/g, function (match, capture, charCode) {
       return String.fromCharCode(charCode);
     });
   }

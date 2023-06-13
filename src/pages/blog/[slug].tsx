@@ -31,8 +31,6 @@ const BlogDetail = () => {
   const handleNavigate = () => {
     router.back();
   };
-  console.log(blogText, 'esra');
-
   return (
     <div className={styles.wrapper}>
       <button onClick={handleNavigate}>
@@ -52,27 +50,33 @@ const BlogDetail = () => {
       <br />
       {blogText?.map((item: any) => (
         <div>
-          {item['type'].includes('arr') ? (
-            <ul className={styles.list}>
-              {item['arr']?.map((item: any) => (
-                <li>{item}</li>
-              ))}
-            </ul>
+          {Object.keys(item)[0].includes('arr') ? (
+            Object.values(item)?.map((el: any) => (
+              <ul className={styles.list}>
+                {typeof el === 'object' ? (
+                  el.map((i: any) => <li>{i}</li>)
+                ) : (
+                  <li>{el}</li>
+                )}
+              </ul>
+            ))
           ) : (
             <div>
               <div
                 className={
-                  item?.['type'].includes('title') &&
-                  item?.['type'].includes('small') === false
+                  Object.keys(item)[0].includes('title') &&
+                  Object.keys(item)[0].includes('small') === false
                     ? styles.mediumTitle
-                    : item?.['type'].includes('title') &&
-                      item?.['type'].includes('small')
+                    : Object.keys(item)[0].includes('title') &&
+                      Object.keys(item)[0].includes('small')
                     ? styles.smallTitle
                     : styles.text
                 }
               >
-                {item['type'] == 'smalltitle' && item['smalltitle']}
-                {item['type'] == 'text' && item['text']}
+                {Object.keys(item)[0].includes('title') && Object.values(item)}
+                {Object.keys(item)[0].includes('text') && Object.values(item)}
+                {Object.keys(item)[0].includes('shortText') &&
+                  Object.values(item)}
               </div>
               <br />
             </div>
