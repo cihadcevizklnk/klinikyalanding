@@ -32,6 +32,12 @@ const Footer = ({ clicked, setClicked }: any) => {
       <section className={styles.footerLeft}>
         <img src="/icons/klinikyaLogo.svg" alt="klinikya" />
         <p>{t('FooterText')}</p>
+        <Link
+          href="/operation-guide"
+          className={styles.bold}
+        >
+          {t('ProcessingGuide')}
+        </Link>
         <p>{t('reachUs')}:hello@klinikya.com </p>
         <div className={styles.icons}>
           <a href="https://twitter.com/klinikya" target="_blank">
