@@ -81,6 +81,13 @@ const Footer = ({ clicked, setClicked }: any) => {
         >
           {t('HealthcareProfessionals')}
         </Link>
+        <Link
+          className={styles.bold}
+          href="/documents"
+          onClick={() => handleClick(5)}
+        >
+          {t('documents')}
+        </Link>
       </section>
       <section className={styles.footerRight}>
         <p className={styles.bold}>{t('download')}</p>

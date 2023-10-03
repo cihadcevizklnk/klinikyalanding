@@ -1,0 +1,21 @@
+.text {
+  word-wrap: break-word;
+  white-space: break-spaces;
+  width: 90vw;
+  margin: 0 auto;
+}
+.buttons {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 50px;
+  font-family: 'FontRegularHead';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #a5a5a5;
+}
+.active {
+  text-decoration: underline;
+  color: #184645;
+}

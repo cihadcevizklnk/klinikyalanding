@@ -3,6 +3,9 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   tr: {
     translation: {
+      documents: 'Kullanıcı Sözleşmeleri',
+      paymentSales: 'Mesafeli Satış Sözleşmesi',
+      sales: 'Klinikya Bireysel Kullanıcı Sözleşmesi',
       logIn: 'Giriş Yap',
       application: 'Uygulama',
       web: 'Yazılım Geliştirme',
@@ -169,6 +172,9 @@ const resources = {
   },
   en: {
     translation: {
+      documents: 'User Agreements',
+      paymentSales: 'Distance Sales Contract',
+      sales: 'Klinikya Individual User Agreement',
       showAllProcedures: 'Show all health packages',
       logIn: 'Login',
       SearchBar2Y: 'Choose a Location',
@@ -334,6 +340,9 @@ const resources = {
   },
   ru: {
     translation: {
+      documents: 'Соглашения пользователя',
+      paymentSales: 'Договор на дистанционные продажи',
+      sales: 'Индивидуальное пользовательское соглашение Klinikya',
       showAllProcedures: 'Показать все пакеты здоровья',
       logIn: 'войти',
       SearchBar2Y: 'Местоположение выберите',
@@ -499,6 +508,9 @@ const resources = {
   },
   de: {
     translation: {
+      documents: 'Nutzervereinbarungen',
+      paymentSales: 'Fernabsatzvertrag',
+      sales: 'Klinikya Individuelle Nutzervereinbarung',
       showAllProcedures: 'Alle Gesundheitspakete anzeigen',
       logIn: 'Anmelden',
       SearchBar2Y: 'Wählen Sie einen Ort',
@@ -664,6 +676,9 @@ const resources = {
   },
   ar: {
     translation: {
+      documents: 'اتفاقيات المستخدمين',
+      paymentSales: 'مبيعات الدفع',
+      sales: 'اتفاقية المستخدم الفردية لـ Klinikya',
       showAllProcedures: 'عرض كل العروض الصحية',
       logIn: 'تسجيل الدخول',
       SearchBar2Y: 'اختر موقع',
