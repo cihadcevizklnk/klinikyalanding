@@ -299,6 +299,11 @@ export default function Home({ targetRef }: any) {
         )}
         <section className={styles.partOneWrapper}>
           {/* <div id="div">{result}</div> */}
+          <div className={styles.logoWrapper}>
+            <img src="/logo_son.svg" alt="" className={styles.logo} />
+            <img src="/logo_son_2.svg" alt="" className={styles.logo} />
+            <img src="/logo_son_3.svg" alt="" className={styles.logo} />
+          </div>
           <div className={styles.partOneTop}>
             <div className={styles.partOneTopLeft}>
               <h1>{t('MainHeading')}</h1>
