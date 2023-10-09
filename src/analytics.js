@@ -1,4 +1,5 @@
-<script
+{
+  /* <script
   async
   src="https://www.googletagmanager.com/gtag/js?id=G-24GNR01VSH"
 ></script>;
@@ -8,4 +9,5 @@ function gtag() {
   dataLayer.push(arguments);
 }
 gtag('js', new Date());
-gtag('config', 'G-24GNR01VSH');
+gtag('config', 'G-24GNR01VSH'); */
+}
