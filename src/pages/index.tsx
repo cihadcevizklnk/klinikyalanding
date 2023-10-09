@@ -291,18 +291,6 @@ export default function Home({ targetRef }: any) {
           rel="stylesheet"
         />
       </Head>
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-T28DHF68GX"
-      ></script>
-      <script>
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-T28DHF68GX');
-          `}
-      </script>
       <main>
         {/* <div onClick={() => handleClick2(53)}>deneme</div>
         <div onClick={() => handleClick()}>deneme2</div> */}
