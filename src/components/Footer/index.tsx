@@ -3,9 +3,11 @@ import { useTranslation } from 'react-i18next';
 import styles from '../../styles/Footer.module.scss';
 import { useRef } from 'react';
 import { useRouter } from 'next/router';
+import i18n from '@/i18n';
 
-const Footer = ({ clicked, setClicked }: any) => {
+const Footer = ({ clicked, setClicked, setSelectedDocument }: any) => {
   const { t } = useTranslation();
+  const language = i18n.language;
   function handleCategory(categoryRef: any, e: any) {
     localStorage.setItem('category', categoryRef);
     clicked != e && setClicked(e);
@@ -21,6 +23,18 @@ const Footer = ({ clicked, setClicked }: any) => {
   };
   const targetRef = useRef(null);
   const router = useRouter();
+  const pdfPath_tr = '/pdfs/Bilgi ve Kalite Yönetimi.docx.pdf';
+  const pdfPath_en = '/pdfs/Bilgi ve Kalite Yönetimi-EN.docx.pdf';
+  const pdfPath_ru = '/pdfs/Bilgi ve Kalite Yönetimi-RU.docx.pdf';
+  const pdfPath_ar = '/pdfs/Bilgi ve Kalite Yönetimi-AR.docx.pdf';
+
+  const openPdf = () => {
+    language == 'tr' && window.open(pdfPath_tr, '_blank');
+    language == 'en' && window.open(pdfPath_en, '_blank');
+    language == 'ru' && window.open(pdfPath_ru, '_blank');
+    language == 'de' && window.open(pdfPath_en, '_blank');
+    language == 'ar' && window.open(pdfPath_ar, '_blank');
+  };
   return (
     <footer
       className={
@@ -32,10 +46,7 @@ const Footer = ({ clicked, setClicked }: any) => {
       <section className={styles.footerLeft}>
         <img src="/icons/klinikyaLogo.svg" alt="klinikya" />
         <p>{t('FooterText')}</p>
-        <Link
-          href="/operation-guide"
-          className={styles.bold}
-        >
+        <Link href="/operation-guide" className={styles.bold}>
           {t('ProcessingGuide')}
         </Link>
         <p>{t('reachUs')}:hello@klinikya.com </p>
@@ -94,6 +105,19 @@ const Footer = ({ clicked, setClicked }: any) => {
         >
           {t('documents')}
         </Link>
+        <Link
+          href="/documents"
+          onClick={() => setSelectedDocument('userDocument')}
+        >
+          {t('userDocument')}
+        </Link>
+        <Link
+          href="/documents"
+          onClick={() => setSelectedDocument('junkDocument')}
+        >
+          {t('junkDocument')}
+        </Link>
+        <div onClick={openPdf}>{t('infoDocument')}</div>
       </section>
       <section className={styles.footerRight}>
         <p className={styles.bold}>{t('download')}</p>

@@ -120,6 +120,7 @@ export default function Home({ targetRef }: any) {
       language,
       date: moment().toISOString(),
       department: true,
+      videoVisit: false,
     };
     const encodedObj = encodeURIComponent(JSON.stringify(myObj));
     router.push(`http://portal.klinikya.com/global-search?obj=${encodedObj}`);

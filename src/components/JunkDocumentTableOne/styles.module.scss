@@ -1,0 +1,116 @@
+.table {
+  width: 70%;
+  margin: 0 auto;
+  border-top: 1px solid #2e384d;
+  border-right: 1px solid #2e384d;
+  border-left: 1px solid #2e384d;
+  border-spacing: 0px;
+  font-family: 'FontThin';
+}
+.mainTr {
+  th {
+    border-bottom: 1px solid #2e384d;
+    min-width: 300px;
+    color: #1a6b6b;
+    font-family: 'FontBold';
+  }
+  th:nth-child(1) {
+    border-right: 1px solid #2e384d;
+  }
+  th:nth-child(2) {
+    border-right: 1px solid #2e384d;
+  }
+}
+
+.secondTr {
+  th {
+    border-bottom: 1px solid #2e384d;
+    color: #1a6b6b;
+    font-family: 'FontBold';
+  }
+}
+
+.bodyTr {
+  td {
+    border-bottom: 1px solid #2e384d;
+    min-width: 300px;
+    padding: 10px 20px;
+  }
+  td:nth-child(1) {
+    border-right: 1px solid #2e384d;
+  }
+  td:nth-child(2) {
+    border-right: 1px solid #2e384d;
+  }
+}
+
+.link {
+  color: #1a6b6b;
+  font-family: 'FontBold';
+  font-family: 'FontRegularHead';
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .table {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 19px;
+
+    th,
+    td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    th,
+    td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    a {
+      display: flex;
+      width: 80vw;
+      max-width: 400px;
+      overflow-x: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .table {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 19px;
+    width: 90%;
+
+    th,
+    td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    th,
+    td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .table {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 19px;
+    width: 90%;
+  }
+}

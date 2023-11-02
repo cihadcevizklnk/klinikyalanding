@@ -13,6 +13,7 @@ import { useRouter } from 'next/router';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [clicked, setClicked] = useState<any>();
+  const [selectedDocument, setSelectedDocument] = useState('userDocument');
   const router = useRouter();
 
   // useEffect(() => {
@@ -33,8 +34,16 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Navbar clicked={clicked} setClicked={setClicked} />
-      <Component {...pageProps} />
-      <Footer clicked={clicked} setClicked={setClicked} />
+      <Component
+        {...pageProps}
+        selectedDocument={selectedDocument}
+        setSelectedDocument={setSelectedDocument}
+      />
+      <Footer
+        clicked={clicked}
+        setClicked={setClicked}
+        setSelectedDocument={setSelectedDocument}
+      />
     </>
   );
 }

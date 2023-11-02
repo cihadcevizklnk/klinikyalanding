@@ -3,7 +3,28 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   tr: {
     translation: {
-      documents: 'Kullanıcı Sözleşmeleri',
+      lastDate: 'Son güncellenme tarihi:',
+      junk: 'Çerez',
+      name: 'İsim',
+      explain: 'Açıklama, Süre ve Tercihler',
+      analytic: 'Analitik Çerezler',
+      td1: 'Google analitikleri',
+      td2: `[VAR]\n_ga[2 Yıl]\n_ga[2 Yıl]\n_gid[2 Gün]`,
+      td3: "Bu tür çerezler tüm istatistiksel verilerin toplanmasını bu şekilde Sitenin sunumunun ve kullanımının geliştirilmesini sağlar. Google, bu istatistiklere toplumsal istatistikler ve ilgilere ilişkin veriler eklemek suretiyle, kullanıcıları daha iyi anlamamızı sağlar.\nSitemiz, Google Analitik çerezleri kullanmaktadır. Söz konusu çerezler ile toplanan veriler, ABD'de bulunan Google sunucularına aktarılmakta ve söz konusu veriler Google'ın veri koruma ilkeleri ile uyumlu olarak muhafaza edilmektedir. Google'ın analitik veri işleme faaliyetleri ve kişisel verilerin korunması konusundaki ilkeler hakkında daha fazla bilgi sahibi olmak için",
+      click1: 'buraya',
+      td4: 'tıklayabilirsiniz.\nÇerezlerin Kontrolü',
+      click2: 'https://tools.google.com/dlpage/gaoptout',
+      technical: 'Teknik Çerezler',
+      td5: 'Oturum',
+      td6: '[VAR]\nASP.NET_SessionId [20 dk]',
+      td7: 'Oturum çerezleri oturumun sürekliliğinin sağlanması amacıyla kullanılır.\nTarayıcı ayarları aracığıyla kabul etmek ya da reddetmek mümkünüdür.',
+      click3: 'tıklayınız',
+      choicesText: 'üzerinden yönetilebilir.',
+      choicesText2: `adresinden ulaşabileceğiniz Veri Sahibi Başvuru Formu'nu doldurarak veya mevzuatta öngörülen sair yöntemler ile Şirketimize iletebilirsiniz.  Talebinizin niteliğine göre en kısa sürede ve en geç otuz gün içinde başvurularınız ücretsiz olarak sonuçlandırılacaktır; ancak işlemin ayrıca bir maliyet gerektirmesi halinde Kişisel Verileri Koruma Kurulu tarafından belirlenecek tarifeye göre tarafınızdan ücret talep edilebilecektir.`,
+      userDocument: 'Kullanıcı Sözleşmesi',
+      junkDocument: 'Çerez Politikası ve Aydınlatma Metni',
+      infoDocument: 'Bilgi ve Kalite Yönetimi',
+      documents: 'Sözleşmeler',
       paymentSales: 'Mesafeli Satış Sözleşmesi',
       sales: 'Klinikya Bireysel Kullanıcı Sözleşmesi',
       logIn: 'Giriş Yap',
@@ -168,7 +189,7 @@ const resources = {
         'Kas',
         'Ara',
       ],
-      ProcessingGuide: "İşlem Rehberi",
+      ProcessingGuide: 'İşlem Rehberi',
       PGTitle1: 'Yüz Yüze Randevu Alınması',
       PGDesciption1: `
       Randevuyu almak istediğiniz hastane, departman veya doktor ismi ile arama yaparak arama sayfasına yönlendirileceksiniz. Burada iligli aramayı ve buna benzer sonuçlar gösterilecektir.
@@ -225,20 +246,44 @@ const resources = {
       PGDesciption8: `
       Ödemesi yapılan ve onaylanan randevu saati geldiğinde kullanıcı randevu detay sayfasından veya doktor ile hasta/danışan mesajlaşma sayfası üzerinden ilgili butona tıklayarak videolu görüşme sayfasını açmaktadır. Bu görüşmeler iki veya üç kişi ile gerçekleştirilebilir. Görüşme esnasında istenildiği durumlarda kamera ve mikrofon kapatıp tekrardan açılabilir. Bununla beraber tarafların istediği durumlarda videolu görüşmeden yapılabilmektedir.`,
 
-      PGTitle9: 'Mesafeli satış sözleşmesine uygulama içerisinde nasıl ulaşılabileceği',
+      PGTitle9:
+        'Mesafeli satış sözleşmesine uygulama içerisinde nasıl ulaşılabileceği',
       PGDesciption9: `
       Ödeme ekranlarının içerisinde bulunan ilgili metin veya kutucuğa tıklayarak bu metne ulaşılabilir. Bununla beraber www.klinikya.com üzerinden ilgili sayfaya giderek metnin tamamına ulaşılabilir.`,
-      PGTitle10: 'Kişisel verilere ilişkin gizlilik kuralları ve bunlara uygulama içerisinde nasıl ulaşabileceği',
+      PGTitle10:
+        'Kişisel verilere ilişkin gizlilik kuralları ve bunlara uygulama içerisinde nasıl ulaşabileceği',
       PGDesciption10: `
       Kayıt olma ekranlarının içerisinde bulunan ilgili metin veya kutucağa tıklayarak bu metne ulaşılabilir. Bununla beraber www.klinikya.com üzerinden ilgili sayfaya giderek metnin tamamına ulaşılabilir.`,
-      PGTitle11: 'Uyuşmazlık çıkması halinde  alternatif uyuşmazlık çözüm mekanizmaları nelerdir?',
+      PGTitle11:
+        'Uyuşmazlık çıkması halinde  alternatif uyuşmazlık çözüm mekanizmaları nelerdir?',
       PGDesciption11: `
       6502 Sayılı Tüketicinin Korunması Hakkında Kanun'un 68. maddesinin 1. fıkrasında belirtilen alt ve üst limitler doğrultusunda tüketici talepleri hakkında ilçe/il tüketici hakem heyetleri yetkilidir.`,
     },
   },
   en: {
     translation: {
-      documents: 'User Agreements',
+      lastDate: 'Date of last update:',
+      junk: 'Cookie',
+      name: 'Name',
+      explain: 'Description, Duration and Preferences',
+      analytic: 'Analytical Cookies',
+      td1: 'Google Analytics',
+      td2: `[VAR]\n_ga[2 Years]\n_ga[2 Years]\n_gid[2 Days]`,
+      td3: "Such cookies enable the collection of all statistical data, thereby improving the presentation and use of the Site. By adding social statistics and data on interests to these statistics, Google enables us to better understand users.Our website uses Google Analytics cookies. The data collected by these cookies are transferred to Google servers located in the USA and such data are stored in accordance with Google's data protection principles. You can click",
+      click1: 'here',
+      td4: "to learn more about Google's analytical data processing activities and the principles on the protection of personal data.\nControl of Cookies",
+      click2: 'https://tools.google.com/dlpage/gaoptout',
+      technical: 'Technical Cookies',
+      td5: 'Session',
+      td6: '[VAR]\nASP.NET_SessionId [20 mins]',
+      td7: 'Session cookies are used to ensure the continuity of the session.\nIt is possible to accept or reject them through browser settings.',
+      click3: 'click here',
+      choicesText: 'can be managed through.',
+      choicesText2: `You may submit your request to our Company by filling out the Data Owner Application Form available at the address or by other methods stipulated in the legislation.  Depending on the nature of your request, your applications will be finalised free of charge as soon as possible and within thirty days at the latest; however, if the transaction requires an additional cost, you may be charged a fee according to the tariff to be determined by the Personal Data Protection Board.`,
+      userDocument: 'User Agreement',
+      junkDocument: 'Cookie Policy and Clarification Text',
+      infoDocument: 'Information and Quality Management',
+      documents: 'Agreements',
       paymentSales: 'Distance Sales Contract',
       sales: 'Klinikya Individual User Agreement',
       showAllProcedures: 'Show all health packages',
@@ -402,34 +447,68 @@ const resources = {
         'Nov',
         'Dec',
       ],
-        "ProcessingGuide": "Processing Guide",
-        "PGTitle1": "Making an Appointment in Person",
-        "PGDesciption1": "By searching with the name of the hospital, department, or doctor you want to make an appointment with, you will be directed to the search page. Relevant search results will be displayed.\n\nAfter selecting the desired doctor, choose the appointment date and time. The next page will show a summary of your selection.\n\nSummary Page confirmation will send your appointment to the doctor/hospital approval mechanism. Additionally, the user will be transferred to the 'My Appointments' page.",
-        "PGTitle2": "Making a Video Appointment",
-        "PGDesciption2": "If you choose the video consultation option, you will be directed to the search page based on the hospital, department, or doctor you want to make an appointment with. Relevant search results will be displayed.\n\nAfter selecting the desired doctor, choose the appointment date and time. The next page will show a summary of your selection.\n\nOnce the Summary Page is confirmed, the user will be directed to the payment page to pay for the video consultation service.",
-        "PGTitle3": "Payment for Video Appointment Service",
-        "PGDesciption3": "The video consultation service fee determined by the hospital or doctor will be collected on this page.\n\nOn the Payment Options screen, fill in your credit card information for payment. If installment options are available, you can choose the desired number of installments. As part of the 3D Secure sales process, after completing the payment steps and clicking the 'Get Appointment' button, the bank will send you an SMS and redirect you to the website. In the next step, read and accept the Preliminary Information Form and Distance Sales Agreement, and click the 'I have read and accepted the Preliminary Information Form and Distance Sales Agreement' option. An online Distance Sales Agreement will be established, displaying the payment information and total amount as separate items.\n\nAfter accepting the agreements, click the 'Get Appointment' button to complete your order and facilitate the payment.",
-        "PGTitle4": "Creating a Service Offer",
-        "PGDesciption4": "The service offer creation page can be accessed through the operation offer, other offers (Ready Packages), or the 'My Offers' page. On this page, you can select the second opinion or operation based on your desired offer. Fill in all relevant fields step by step to match the offer you want to create. In the final step, create the service offer by entering your relevant diseases and medications.\n\nThis offer will be sent only to the relevant hospitals suitable for the selected operation or department. The information you provide will be valid for the offer, and you may be prompted to enter this information again for your appointment and other offers.",
-        "PGTitle5": "Responding to Received Service Offer",
-        "PGDesciption5": "The offers sent by the patient/consultant will be sent only to the relevant hospitals based on the offer details. The responding institutions cannot see each other's offer details. The service response will take place confidentially between the patient and the hospital.\n\nEnter the department, price, date, and description information according to the offer, and send the Service Response Offer back to the patient for review and approval.",
-        "PGTitle6": "Approval of Received Service Response Offer",
-        "PGDesciption6": "During the approval stage of the received Service Response Offer, a private process takes place between the patient/consultant and the hospital. If desired, additional information can be obtained and communication can be established through messaging within the application.\n\nDuring the offer approval stage, the personal assistant option can be selected to enhance the experience and time spent at the hospital.\n\nAfter evaluating and approving the offer, the patient/consultant is directed to the payment page to pay the fee determined by the hospital.",
-        "PGTitle7": "Payment Collection for Received Service Response Offer",
-        "PGDesciption7": "The service fee determined by the hospital for the received Service Response Offer will be collected on this page.\n\nOn the Payment Options screen, fill in your credit card information for payment. If installment options are available, you can choose the desired number of installments. As part of the 3D Secure sales process, after completing the payment steps and clicking the 'Approve Offer' button, the bank will send you an SMS and redirect you to the website. In the next step, read and accept the Preliminary Information Form and Distance Sales Agreement, and click the 'I have read and accepted the Preliminary Information Form and Distance Sales Agreement' option. An online Distance Sales Agreement will be established, displaying the payment information and total amount as separate items.\n\nAfter accepting the agreements, click the 'Approve Offer' button to complete your order and facilitate the payment.",
-        "PGTitle8": "Conducting the Video Appointment",
-        "PGDesciption8": "Once the payment has been made and the video appointment has been approved, you can open the video consultation page from the appointment details page or the doctor-patient/consultant messaging page by clicking the relevant button. These meetings can be conducted with two or three participants. During the meeting, the camera and microphone can be turned on and off as desired. Additionally, parties can communicate without using video if preferred.",
-        "PGTitle9": "Accessing the Distance Sales Agreement within the Application",
-        "PGDesciption9": "You can access the Distance Sales Agreement by clicking on the relevant text or checkbox within the payment screens. Additionally, you can visit www.klinikya.com to go to the relevant page and access the full text.",
-        "PGTitle10": "Privacy Rules for Personal Data and How to Access Them within the Application",
-        "PGDesciption10": "You can access the Privacy Rules for Personal Data by clicking on the relevant text or checkbox within the registration screens. Additionally, you can visit www.klinikya.com to go to the relevant page and access the full text.",
-        "PGTitle11": "Alternative Dispute Resolution Mechanisms in Case of Disputes",
-        "PGDesciption11": "In accordance with Article 68, paragraph 1 of the Law on the Protection of the Consumer No. 6502, district/provincial consumer arbitration boards are authorized for consumer demands within the specified limits."
+      ProcessingGuide: 'Processing Guide',
+      PGTitle1: 'Making an Appointment in Person',
+      PGDesciption1:
+        "By searching with the name of the hospital, department, or doctor you want to make an appointment with, you will be directed to the search page. Relevant search results will be displayed.\n\nAfter selecting the desired doctor, choose the appointment date and time. The next page will show a summary of your selection.\n\nSummary Page confirmation will send your appointment to the doctor/hospital approval mechanism. Additionally, the user will be transferred to the 'My Appointments' page.",
+      PGTitle2: 'Making a Video Appointment',
+      PGDesciption2:
+        'If you choose the video consultation option, you will be directed to the search page based on the hospital, department, or doctor you want to make an appointment with. Relevant search results will be displayed.\n\nAfter selecting the desired doctor, choose the appointment date and time. The next page will show a summary of your selection.\n\nOnce the Summary Page is confirmed, the user will be directed to the payment page to pay for the video consultation service.',
+      PGTitle3: 'Payment for Video Appointment Service',
+      PGDesciption3:
+        "The video consultation service fee determined by the hospital or doctor will be collected on this page.\n\nOn the Payment Options screen, fill in your credit card information for payment. If installment options are available, you can choose the desired number of installments. As part of the 3D Secure sales process, after completing the payment steps and clicking the 'Get Appointment' button, the bank will send you an SMS and redirect you to the website. In the next step, read and accept the Preliminary Information Form and Distance Sales Agreement, and click the 'I have read and accepted the Preliminary Information Form and Distance Sales Agreement' option. An online Distance Sales Agreement will be established, displaying the payment information and total amount as separate items.\n\nAfter accepting the agreements, click the 'Get Appointment' button to complete your order and facilitate the payment.",
+      PGTitle4: 'Creating a Service Offer',
+      PGDesciption4:
+        "The service offer creation page can be accessed through the operation offer, other offers (Ready Packages), or the 'My Offers' page. On this page, you can select the second opinion or operation based on your desired offer. Fill in all relevant fields step by step to match the offer you want to create. In the final step, create the service offer by entering your relevant diseases and medications.\n\nThis offer will be sent only to the relevant hospitals suitable for the selected operation or department. The information you provide will be valid for the offer, and you may be prompted to enter this information again for your appointment and other offers.",
+      PGTitle5: 'Responding to Received Service Offer',
+      PGDesciption5:
+        "The offers sent by the patient/consultant will be sent only to the relevant hospitals based on the offer details. The responding institutions cannot see each other's offer details. The service response will take place confidentially between the patient and the hospital.\n\nEnter the department, price, date, and description information according to the offer, and send the Service Response Offer back to the patient for review and approval.",
+      PGTitle6: 'Approval of Received Service Response Offer',
+      PGDesciption6:
+        'During the approval stage of the received Service Response Offer, a private process takes place between the patient/consultant and the hospital. If desired, additional information can be obtained and communication can be established through messaging within the application.\n\nDuring the offer approval stage, the personal assistant option can be selected to enhance the experience and time spent at the hospital.\n\nAfter evaluating and approving the offer, the patient/consultant is directed to the payment page to pay the fee determined by the hospital.',
+      PGTitle7: 'Payment Collection for Received Service Response Offer',
+      PGDesciption7:
+        "The service fee determined by the hospital for the received Service Response Offer will be collected on this page.\n\nOn the Payment Options screen, fill in your credit card information for payment. If installment options are available, you can choose the desired number of installments. As part of the 3D Secure sales process, after completing the payment steps and clicking the 'Approve Offer' button, the bank will send you an SMS and redirect you to the website. In the next step, read and accept the Preliminary Information Form and Distance Sales Agreement, and click the 'I have read and accepted the Preliminary Information Form and Distance Sales Agreement' option. An online Distance Sales Agreement will be established, displaying the payment information and total amount as separate items.\n\nAfter accepting the agreements, click the 'Approve Offer' button to complete your order and facilitate the payment.",
+      PGTitle8: 'Conducting the Video Appointment',
+      PGDesciption8:
+        'Once the payment has been made and the video appointment has been approved, you can open the video consultation page from the appointment details page or the doctor-patient/consultant messaging page by clicking the relevant button. These meetings can be conducted with two or three participants. During the meeting, the camera and microphone can be turned on and off as desired. Additionally, parties can communicate without using video if preferred.',
+      PGTitle9: 'Accessing the Distance Sales Agreement within the Application',
+      PGDesciption9:
+        'You can access the Distance Sales Agreement by clicking on the relevant text or checkbox within the payment screens. Additionally, you can visit www.klinikya.com to go to the relevant page and access the full text.',
+      PGTitle10:
+        'Privacy Rules for Personal Data and How to Access Them within the Application',
+      PGDesciption10:
+        'You can access the Privacy Rules for Personal Data by clicking on the relevant text or checkbox within the registration screens. Additionally, you can visit www.klinikya.com to go to the relevant page and access the full text.',
+      PGTitle11:
+        'Alternative Dispute Resolution Mechanisms in Case of Disputes',
+      PGDesciption11:
+        'In accordance with Article 68, paragraph 1 of the Law on the Protection of the Consumer No. 6502, district/provincial consumer arbitration boards are authorized for consumer demands within the specified limits.',
     },
   },
   ru: {
     translation: {
-      documents: 'Соглашения пользователя',
+      lastDate: 'Дата последнего обновления:',
+      junk: 'Cookie',
+      name: 'Название',
+      explain: 'Описание, продолжительность и предпочтения',
+      analytic: 'Аналитические файлы cookie',
+      td1: 'Аналитика Google',
+      td2: `[VAR]\n_ga[2 год]\n_ga[2 год]\n_gid[2 день]`,
+      td3: 'Такие файлы cookie позволяют собирать все статистические данные, тем самым улучшая представление и использование Сайта. Добавляя к этим статистическим данным социальную статистику и данные об интересах, Google позволяет нам лучше понимать пользователей.На нашем сайте используются файлы cookie Google Analytics. Данные, собираемые этими cookies, передаются на серверы Google, расположенные в США, и эти данные хранятся в соответствии с принципами защиты данных Google. Более подробно о деятельности Google по обработке аналитических данных и принципах защиты персональных данных можно узнать',
+      click1: 'здесь',
+      td4: '\nУправление файлами cookie',
+      click2: 'https://tools.google.com/dlpage/gaoptout',
+      technical: 'Технические файлы cookie',
+      td5: 'Сессия',
+      td6: '[VAR]\nASP.NET_SessionId [20 мин]',
+      td7: 'Сеансовые cookie-файлы используются для обеспечения непрерывности сеанса.\nИх можно принимать или отклонять через настройки браузера.',
+      click3: 'нажмите здесь',
+      choicesText2: `или иными способами, предусмотренными законодательством.  В зависимости от характера Вашего запроса, Ваши заявления будут рассмотрены бесплатно в кратчайшие сроки, не позднее тридцати дней; однако если операция требует дополнительных затрат, с Вас может быть взыскана плата в соответствии с тарифом, устанавливаемым Советом по защите персональных данных.`,
+      userDocument: 'Пользовательское соглашение',
+      junkDocument: 'Политика в отношении файлов cookie и пояснительный текст',
+      infoDocument: 'Информация и управление качеством',
+      sales: 'Индивидуальное пользовательское соглашение Клиники',
+      documents: 'Договоры',
       paymentSales: 'Договор на дистанционные продажи',
       sales: 'Индивидуальное пользовательское соглашение Klinikya',
       showAllProcedures: 'Показать все пакеты здоровья',
@@ -593,34 +672,69 @@ const resources = {
         'Ноя',
         'Дек',
       ],
-      "ProcessingGuide": "Руководство по обработке",
-"PGTitle1": "Запись на личную встречу",
-"PGDesciption1": "Поиск по имени больницы, отделения или врача, к которому вы хотите записаться на прием, направит вас на страницу поиска. Будут отображены соответствующие результаты поиска.\n\nПосле выбора нужного врача выберите дату и время приема. На следующей странице будет показано подтверждение вашего выбора.\n\nПодтверждение на странице суммаризации отправит вашу запись на одобрение врачу/больнице. Кроме того, пользователь будет перенаправлен на страницу 'Мои записи'.",
-"PGTitle2": "Запись на видеоконсультацию",
-"PGDesciption2": "Если вы выбираете опцию видеоконсультации, вас направят на страницу поиска на основе больницы, отделения или врача, к которому вы хотите записаться на прием. Будут отображены соответствующие результаты поиска.\n\nПосле выбора нужного врача выберите дату и время приема. На следующей странице будет показано подтверждение вашего выбора.\n\nПосле подтверждения страницы суммаризации вы будете направлены на страницу оплаты за услугу видеоконсультации.",
-"PGTitle3": "Оплата за услугу видеоконсультации",
-"PGDesciption3": "На этой странице будет взиматься плата за услугу видеоконсультации, определенная больницей или врачом.\n\nНа экране с вариантами оплаты заполните информацию о вашей кредитной карте. Если доступны варианты рассрочки, вы можете выбрать желаемое количество платежей. В рамках процесса продаж 3D Secure после завершения шагов оплаты и нажатия кнопки 'Получить прием', банк отправит вам SMS и перенаправит вас на веб-сайт. На следующем шаге ознакомьтесь и примите Предварительную информацию и Договор о дистанционной продаже, а затем нажмите на опцию 'Я ознакомился и принимаю Предварительную информацию и Договор о дистанционной продаже'. Будет установлен дистанционный договор о продаже, на котором будут отображены информация об оплате и общая сумма в отдельных позициях.\n\nПосле принятия соглашений нажмите кнопку 'Получить прием', чтобы завершить ваш заказ и упростить оплату.",
-"PGTitle4": "Создание предложения о услуге",
-"PGDesciption4": "Страницу создания предложения о услуге можно открыть через предложение операции, другие предложения (готовые пакеты) или страницу 'Мои предложения'. На этой странице вы можете выбрать второе мнение или операцию в соответствии с желаемым предложением. Поэтапно заполните все соответствующие поля для создания нужного предложения. На последнем шаге создайте предложение о услуге, указав соответствующие заболевания и лекарства.\n\nЭто предложение будет отправлено только соответствующим больницам, подходящим для выбранной операции или отделения. Предоставленная вами информация будет действительной для предложения, и вам может потребоваться ввести эту информацию снова при записи на прием и в других предложениях.",
-"PGTitle5": "Ответ на полученное предложение о услуге",
-"PGDesciption5": "Предложения, отправленные пациентом/консультантом, будут направлены только соответствующим больницам на основе деталей предложения. Ответные учреждения не могут видеть детали предложений друг друга. Ответ на предложение об услуге будет проводиться конфиденциально между пациентом и больницей.\n\nВведите информацию о отделении, цене, дате и описании в соответствии с предложением и отправьте ответное предложение об услуге пациенту для рассмотрения и утверждения.",
-"PGTitle6": "Утверждение полученного ответного предложения об услуге",
-"PGDesciption6": "Во время этапа утверждения полученного ответного предложения об услуге происходит конфиденциальный процесс между пациентом/консультантом и больницей. При желании можно получить дополнительную информацию и установить связь через сообщения в приложении.\n\nВо время этапа утверждения предложения можно выбрать опцию персонального помощника, чтобы улучшить опыт и время, проведенное в больнице.\n\nПосле оценки и утверждения предложения пациент/консультант будет направлен на страницу оплаты сбора, определенного больницей.",
-"PGTitle7":"Сбор платы за полученное ответное предложение об услуге",
-"PGDesciption7": "На этой странице будет взиматься плата за услугу, определенную больницей, за полученное ответное предложение об услуге.\n\nНа экране вариантов оплаты заполните информацию о вашей кредитной карте. Если доступны варианты рассрочки, вы можете выбрать желаемое количество платежей. В рамках процесса продаж 3D Secure после завершения шагов оплаты и нажатия кнопки 'Утвердить предложение', банк отправит вам SMS и перенаправит вас на веб-сайт. На следующем шаге ознакомьтесь и примите Предварительную информацию и Договор о дистанционной продаже, а затем нажмите на опцию 'Я ознакомился и принимаю Предварительную информацию и Договор о дистанционной продаже'. Будет установлен дистанционный договор о продаже, на котором будут отображены информация об оплате и общая сумма в отдельных позициях.\n\nПосле принятия соглашений нажмите кнопку 'Утвердить предложение', чтобы завершить ваш заказ и упростить оплату.",
-"PGTitle8": "Проведение видеоконсультации",
-"PGDesciption8": "После совершения оплаты и утверждения видеоконсультации вы можете открыть страницу видеоконсультации из страницы сведений о приеме или страницы переписки между врачом и пациентом/консультантом, нажав соответствующую кнопку. Эти встречи могут проводиться с двумя или тремя участниками. Во время встречи можно включать и отключать камеру и микрофон по желанию. Кроме того, стороны могут общаться без использования видео, если предпочтительно.",
-"PGTitle9": "Доступ к договору о дистанционной продаже в приложении",
-"PGDesciption9": "Вы можете получить доступ к договору о дистанционной продаже, нажав на соответствующий текст или флажок на экранах оплаты. Кроме того, вы можете посетить www.klinikya.com, чтобы перейти на соответствующую страницу и получить полный текст.",
-"PGTitle10": "Правила конфиденциальности персональных данных и доступ к ним в приложении",
-"PGDesciption10": "Вы можете получить доступ к Правилам конфиденциальности персональных данных, нажав на соответствующий текст или флажок на экранах регистрации. Кроме того, вы можете посетить www.klinikya.com, чтобы перейти на соответствующую страницу и получить полный текст.",
-"PGTitle11": "Альтернативные механизмы разрешения споров в случае конфликтов",
-"PGDesciption11": "В соответствии со статьей 68, параграф 1 Закона о защите прав потребителей № 6502 для рассмотрения требований потребителей в пределах установленных ограничений предусмотрены районные/областные арбитражные комиссии потребителей."
+      ProcessingGuide: 'Руководство по обработке',
+      PGTitle1: 'Запись на личную встречу',
+      PGDesciption1:
+        "Поиск по имени больницы, отделения или врача, к которому вы хотите записаться на прием, направит вас на страницу поиска. Будут отображены соответствующие результаты поиска.\n\nПосле выбора нужного врача выберите дату и время приема. На следующей странице будет показано подтверждение вашего выбора.\n\nПодтверждение на странице суммаризации отправит вашу запись на одобрение врачу/больнице. Кроме того, пользователь будет перенаправлен на страницу 'Мои записи'.",
+      PGTitle2: 'Запись на видеоконсультацию',
+      PGDesciption2:
+        'Если вы выбираете опцию видеоконсультации, вас направят на страницу поиска на основе больницы, отделения или врача, к которому вы хотите записаться на прием. Будут отображены соответствующие результаты поиска.\n\nПосле выбора нужного врача выберите дату и время приема. На следующей странице будет показано подтверждение вашего выбора.\n\nПосле подтверждения страницы суммаризации вы будете направлены на страницу оплаты за услугу видеоконсультации.',
+      PGTitle3: 'Оплата за услугу видеоконсультации',
+      PGDesciption3:
+        "На этой странице будет взиматься плата за услугу видеоконсультации, определенная больницей или врачом.\n\nНа экране с вариантами оплаты заполните информацию о вашей кредитной карте. Если доступны варианты рассрочки, вы можете выбрать желаемое количество платежей. В рамках процесса продаж 3D Secure после завершения шагов оплаты и нажатия кнопки 'Получить прием', банк отправит вам SMS и перенаправит вас на веб-сайт. На следующем шаге ознакомьтесь и примите Предварительную информацию и Договор о дистанционной продаже, а затем нажмите на опцию 'Я ознакомился и принимаю Предварительную информацию и Договор о дистанционной продаже'. Будет установлен дистанционный договор о продаже, на котором будут отображены информация об оплате и общая сумма в отдельных позициях.\n\nПосле принятия соглашений нажмите кнопку 'Получить прием', чтобы завершить ваш заказ и упростить оплату.",
+      PGTitle4: 'Создание предложения о услуге',
+      PGDesciption4:
+        "Страницу создания предложения о услуге можно открыть через предложение операции, другие предложения (готовые пакеты) или страницу 'Мои предложения'. На этой странице вы можете выбрать второе мнение или операцию в соответствии с желаемым предложением. Поэтапно заполните все соответствующие поля для создания нужного предложения. На последнем шаге создайте предложение о услуге, указав соответствующие заболевания и лекарства.\n\nЭто предложение будет отправлено только соответствующим больницам, подходящим для выбранной операции или отделения. Предоставленная вами информация будет действительной для предложения, и вам может потребоваться ввести эту информацию снова при записи на прием и в других предложениях.",
+      PGTitle5: 'Ответ на полученное предложение о услуге',
+      PGDesciption5:
+        'Предложения, отправленные пациентом/консультантом, будут направлены только соответствующим больницам на основе деталей предложения. Ответные учреждения не могут видеть детали предложений друг друга. Ответ на предложение об услуге будет проводиться конфиденциально между пациентом и больницей.\n\nВведите информацию о отделении, цене, дате и описании в соответствии с предложением и отправьте ответное предложение об услуге пациенту для рассмотрения и утверждения.',
+      PGTitle6: 'Утверждение полученного ответного предложения об услуге',
+      PGDesciption6:
+        'Во время этапа утверждения полученного ответного предложения об услуге происходит конфиденциальный процесс между пациентом/консультантом и больницей. При желании можно получить дополнительную информацию и установить связь через сообщения в приложении.\n\nВо время этапа утверждения предложения можно выбрать опцию персонального помощника, чтобы улучшить опыт и время, проведенное в больнице.\n\nПосле оценки и утверждения предложения пациент/консультант будет направлен на страницу оплаты сбора, определенного больницей.',
+      PGTitle7: 'Сбор платы за полученное ответное предложение об услуге',
+      PGDesciption7:
+        "На этой странице будет взиматься плата за услугу, определенную больницей, за полученное ответное предложение об услуге.\n\nНа экране вариантов оплаты заполните информацию о вашей кредитной карте. Если доступны варианты рассрочки, вы можете выбрать желаемое количество платежей. В рамках процесса продаж 3D Secure после завершения шагов оплаты и нажатия кнопки 'Утвердить предложение', банк отправит вам SMS и перенаправит вас на веб-сайт. На следующем шаге ознакомьтесь и примите Предварительную информацию и Договор о дистанционной продаже, а затем нажмите на опцию 'Я ознакомился и принимаю Предварительную информацию и Договор о дистанционной продаже'. Будет установлен дистанционный договор о продаже, на котором будут отображены информация об оплате и общая сумма в отдельных позициях.\n\nПосле принятия соглашений нажмите кнопку 'Утвердить предложение', чтобы завершить ваш заказ и упростить оплату.",
+      PGTitle8: 'Проведение видеоконсультации',
+      PGDesciption8:
+        'После совершения оплаты и утверждения видеоконсультации вы можете открыть страницу видеоконсультации из страницы сведений о приеме или страницы переписки между врачом и пациентом/консультантом, нажав соответствующую кнопку. Эти встречи могут проводиться с двумя или тремя участниками. Во время встречи можно включать и отключать камеру и микрофон по желанию. Кроме того, стороны могут общаться без использования видео, если предпочтительно.',
+      PGTitle9: 'Доступ к договору о дистанционной продаже в приложении',
+      PGDesciption9:
+        'Вы можете получить доступ к договору о дистанционной продаже, нажав на соответствующий текст или флажок на экранах оплаты. Кроме того, вы можете посетить www.klinikya.com, чтобы перейти на соответствующую страницу и получить полный текст.',
+      PGTitle10:
+        'Правила конфиденциальности персональных данных и доступ к ним в приложении',
+      PGDesciption10:
+        'Вы можете получить доступ к Правилам конфиденциальности персональных данных, нажав на соответствующий текст или флажок на экранах регистрации. Кроме того, вы можете посетить www.klinikya.com, чтобы перейти на соответствующую страницу и получить полный текст.',
+      PGTitle11:
+        'Альтернативные механизмы разрешения споров в случае конфликтов',
+      PGDesciption11:
+        'В соответствии со статьей 68, параграф 1 Закона о защите прав потребителей № 6502 для рассмотрения требований потребителей в пределах установленных ограничений предусмотрены районные/областные арбитражные комиссии потребителей.',
     },
   },
   de: {
     translation: {
-      documents: 'Nutzervereinbarungen',
+      lastDate: 'Date of last update:',
+      junk: 'Cookie',
+      name: 'Name',
+      explain: 'Description, Duration and Preferences',
+      analytic: 'Analytical Cookies',
+      td1: 'Google Analytics',
+      td2: `[VAR]\n_ga[2 Years]\n_ga[2 Years]\n_gid[2 Days]`,
+      td3: "Such cookies enable the collection of all statistical data, thereby improving the presentation and use of the Site. By adding social statistics and data on interests to these statistics, Google enables us to better understand users.Our website uses Google Analytics cookies. The data collected by these cookies are transferred to Google servers located in the USA and such data are stored in accordance with Google's data protection principles. You can click",
+      click1: 'here',
+      td4: "to learn more about Google's analytical data processing activities and the principles on the protection of personal data.\nControl of Cookies",
+      click2: 'https://tools.google.com/dlpage/gaoptout',
+      technical: 'Technical Cookies',
+      td5: 'Session',
+      td6: '[VAR]\nASP.NET_SessionId [20 mins]',
+      td7: 'Session cookies are used to ensure the continuity of the session.\nIt is possible to accept or reject them through browser settings.',
+      click3: 'click here',
+      choicesText: 'can be managed through.',
+      choicesText2: `You may submit your request to our Company by filling out the Data Owner Application Form available at the address or by other methods stipulated in the legislation.  Depending on the nature of your request, your applications will be finalised free of charge as soon as possible and within thirty days at the latest; however, if the transaction requires an additional cost, you may be charged a fee according to the tariff to be determined by the Personal Data Protection Board.`,
+      userDocument: 'Nutzungsvertrag',
+      junkDocument: 'Cookie-Richtlinie und Erläuterungstext',
+      infoDocument: 'Information und Qualitätsmanagement',
+      sales: 'Klinikya Individuelle Benutzervereinbarung',
+      documents: 'Verträge',
       paymentSales: 'Fernabsatzvertrag',
       sales: 'Klinikya Individuelle Nutzervereinbarung',
       showAllProcedures: 'Alle Gesundheitspakete anzeigen',
@@ -784,34 +898,68 @@ const resources = {
         ' Nov',
         ' Dez',
       ],
-      "ProcessingGuide": "Bearbeitungsleitfaden",
-"PGTitle1": "Persönlich einen Termin vereinbaren",
-"PGDesciption1": "Indem Sie nach dem Namen des Krankenhauses, der Abteilung oder des Arztes suchen, mit dem Sie einen Termin vereinbaren möchten, werden Sie zur Suchseite weitergeleitet. Relevante Suchergebnisse werden angezeigt.\n\nNach Auswahl des gewünschten Arztes wählen Sie das Termindatum und die Uhrzeit aus. Die nächste Seite zeigt eine Zusammenfassung Ihrer Auswahl an.\n\nDie Bestätigung auf der Zusammenfassungsseite sendet Ihren Termin an den Genehmigungsmechanismus des Arztes/Krankenhauses. Darüber hinaus werden Sie zur Seite 'Meine Termine' weitergeleitet.",
-"PGTitle2": "Vereinbarung eines Video-Termins",
-"PGDesciption2": "Wenn Sie die Option zur Video-Konsultation wählen, werden Sie zur Suchseite weitergeleitet, basierend auf dem Krankenhaus, der Abteilung oder dem Arzt, mit dem Sie einen Termin vereinbaren möchten. Relevante Suchergebnisse werden angezeigt.\n\nNach Auswahl des gewünschten Arztes wählen Sie das Termindatum und die Uhrzeit aus. Die nächste Seite zeigt eine Zusammenfassung Ihrer Auswahl an.\n\nNach Bestätigung der Zusammenfassungsseite werden Sie zur Zahlungsseite weitergeleitet, um den Video-Konsultationsdienst zu bezahlen.",
-"PGTitle3": "Zahlung für den Video-Termin-Service",
-"PGDesciption3": "Auf dieser Seite wird die vom Krankenhaus oder Arzt festgelegte Gebühr für den Video-Konsultationsdienst eingezogen.\n\nAuf der Zahlungsoptionsseite geben Sie Ihre Kreditkarteninformationen für die Zahlung ein. Wenn Ratenzahlungsoptionen verfügbar sind, können Sie die gewünschte Anzahl von Raten auswählen. Im Rahmen des 3D Secure-Verkaufsprozesses sendet Ihnen die Bank nach Abschluss der Zahlungsschritte und Klicken auf die Schaltfläche 'Termin erhalten' eine SMS und leitet Sie auf die Website weiter. Im nächsten Schritt lesen Sie das Vorvertragliche Informationsformular und die Fernabsatzvereinbarung durch und klicken auf die Option 'Ich habe das Vorvertragliche Informationsformular und die Fernabsatzvereinbarung gelesen und akzeptiert'. Es wird eine Online-Fernabsatzvereinbarung erstellt, in der die Zahlungsinformationen und der Gesamtbetrag als separate Positionen angezeigt werden.\n\nNach Annahme der Vereinbarungen klicken Sie auf die Schaltfläche 'Termin erhalten', um Ihre Bestellung abzuschließen und die Zahlung zu erleichtern.",
-"PGTitle4": "Erstellung eines Serviceangebots",
-"PGDesciption4": "Die Seite zur Erstellung des Serviceangebots kann über das Operationsangebot, andere Angebote (Ready Packages) oder die Seite 'Meine Angebote' aufgerufen werden. Auf dieser Seite können Sie die Zweitmeinung oder Operation gemäß Ihrem gewünschten Angebot auswählen. Füllen Sie schrittweise alle relevanten Felder aus, um das gewünschte Angebot abzugleichen. Im letzten Schritt erstellen Sie das Serviceangebot, indem Sie Ihre relevanten Krankheiten und Medikamente eingeben.\n\nDieses Angebot wird nur an die relevanten Krankenhäuser gesendet, die für die ausgewählte Operation oder Abteilung geeignet sind. Die von Ihnen angegebenen Informationen sind für das Angebot gültig, und Sie werden möglicherweise aufgefordert, diese Informationen erneut für Ihren Termin und andere Angebote einzugeben.",
-"PGTitle5": "Antwort auf erhaltenes Serviceangebot",
-"PGDesciption5": "Die vom Patienten/Berater gesendeten Angebote werden nur an die relevanten Krankenhäuser basierend auf den Angebotdetails gesendet. Die reagierenden Institutionen können die Angebotsdetails der anderen nicht sehen. Die Serviceantwort erfolgt vertraulich zwischen dem Patienten und dem Krankenhaus.\n\nGeben Sie gemäß dem Angebot die Abteilung, den Preis, das Datum und die Beschreibungsinformationen ein und senden Sie das Serviceantwortangebot zur Überprüfung und Genehmigung an den Patienten zurück.",
-"PGTitle6": "Genehmigung des erhaltenen Serviceantwortangebots",
-"PGDesciption6": "Während der Genehmigungsphase des erhaltenen Serviceantwortangebots findet ein privater Prozess zwischen dem Patienten/Berater und dem Krankenhaus statt. Falls gewünscht, können zusätzliche Informationen eingeholt und über die Messaging-Funktion innerhalb der Anwendung kommuniziert werden.\n\nWährend der Angebots-Genehmigungsphase kann die Option 'Persönlicher Assistent' ausgewählt werden, um das Erlebnis und die Zeit im Krankenhaus zu verbessern.\n\nNach Bewertung und Genehmigung des Angebots wird der Patient/Berater zur Zahlungsseite weitergeleitet, um die vom Krankenhaus festgelegte Gebühr zu bezahlen.",
-"PGTitle7": "Zahlungseinzug für erhaltenes Serviceantwortangebot",
-"PGDesciption7": "Die vom Krankenhaus für das erhaltene Serviceantwortangebot festgelegte Servicegebühr wird auf dieser Seite eingezogen.\n\nGeben Sie auf der Zahlungsoptionsseite Ihre Kreditkarteninformationen für die Zahlung ein. Wenn Ratenzahlungsoptionen verfügbar sind, können Sie die gewünschte Anzahl von Raten auswählen. Im Rahmen des 3D Secure-Verkaufsprozesses sendet Ihnen die Bank nach Abschluss der Zahlungsschritte und Klicken auf die Schaltfläche 'Angebot genehmigen' eine SMS und leitet Sie auf die Website weiter. Im nächsten Schritt lesen Sie das Vorvertragliche Informationsformular und die Fernabsatzvereinbarung durch und klicken auf die Option 'Ich habe das Vorvertragliche Informationsformular und die Fernabsatzvereinbarung gelesen und akzeptiert'. Es wird eine Online-Fernabsatzvereinbarung erstellt, in der die Zahlungsinformationen und der Gesamtbetrag als separate Positionen angezeigt werden.\n\nNach Annahme der Vereinbarungen klicken Sie auf die Schaltfläche 'Angebot genehmigen', um Ihre Bestellung abzuschließen und die Zahlung zu erleichtern.",
-"PGTitle8": "Durchführung des Video-Termins",
-"PGDesciption8": "Sobald die Zahlung erfolgt ist und der Video-Termin genehmigt wurde, können Sie von der Termindetails-Seite oder der Arzt-Patienten/Berater-Nachrichten-Seite aus durch Klicken auf die entsprechende Schaltfläche zur Video-Konsultationsseite gelangen. Diese Treffen können mit zwei oder drei Teilnehmern durchgeführt werden. Während des Treffens können Kamera und Mikrofon nach Belieben ein- und ausgeschaltet werden. Darüber hinaus können die Parteien bei Bedarf auch ohne Video kommunizieren.",
-"PGTitle9": "Zugriff auf die Fernabsatzvereinbarung innerhalb der Anwendung",
-"PGDesciption9": "Sie können auf die Fernabsatzvereinbarung zugreifen, indem Sie auf den entsprechenden Text oder das entsprechende Kontrollkästchen innerhalb der Zahlungsbildschirme klicken. Darüber hinaus können Sie www.klinikya.com besuchen, um zur entsprechenden Seite zu gelangen und den vollständigen Text einzusehen.",
-"PGTitle10": "Datenschutzregeln für personenbezogene Daten und deren Zugriff in der Anwendung",
-"PGDesciption10": "Sie können auf die Datenschutzregeln für personenbezogene Daten zugreifen, indem Sie auf den entsprechenden Text oder das entsprechende Kontrollkästchen innerhalb der Registrierungsbildschirme klicken. Darüber hinaus können Sie www.klinikya.com besuchen, um zur entsprechenden Seite zu gelangen und den vollständigen Text einzusehen.",
-"PGTitle11": "Alternative Streitbeilegungsmechanismen im Streitfall",
-"PGDesciption11": "Gemäß Artikel 68 Absatz 1 des Gesetzes zum Schutz des Verbrauchers Nr. 6502 sind Bezirks-/Provinz-Verbraucher-Schiedsstellen für Verbraucherforderungen innerhalb der festgelegten Grenzen zuständig."
+      ProcessingGuide: 'Bearbeitungsleitfaden',
+      PGTitle1: 'Persönlich einen Termin vereinbaren',
+      PGDesciption1:
+        "Indem Sie nach dem Namen des Krankenhauses, der Abteilung oder des Arztes suchen, mit dem Sie einen Termin vereinbaren möchten, werden Sie zur Suchseite weitergeleitet. Relevante Suchergebnisse werden angezeigt.\n\nNach Auswahl des gewünschten Arztes wählen Sie das Termindatum und die Uhrzeit aus. Die nächste Seite zeigt eine Zusammenfassung Ihrer Auswahl an.\n\nDie Bestätigung auf der Zusammenfassungsseite sendet Ihren Termin an den Genehmigungsmechanismus des Arztes/Krankenhauses. Darüber hinaus werden Sie zur Seite 'Meine Termine' weitergeleitet.",
+      PGTitle2: 'Vereinbarung eines Video-Termins',
+      PGDesciption2:
+        'Wenn Sie die Option zur Video-Konsultation wählen, werden Sie zur Suchseite weitergeleitet, basierend auf dem Krankenhaus, der Abteilung oder dem Arzt, mit dem Sie einen Termin vereinbaren möchten. Relevante Suchergebnisse werden angezeigt.\n\nNach Auswahl des gewünschten Arztes wählen Sie das Termindatum und die Uhrzeit aus. Die nächste Seite zeigt eine Zusammenfassung Ihrer Auswahl an.\n\nNach Bestätigung der Zusammenfassungsseite werden Sie zur Zahlungsseite weitergeleitet, um den Video-Konsultationsdienst zu bezahlen.',
+      PGTitle3: 'Zahlung für den Video-Termin-Service',
+      PGDesciption3:
+        "Auf dieser Seite wird die vom Krankenhaus oder Arzt festgelegte Gebühr für den Video-Konsultationsdienst eingezogen.\n\nAuf der Zahlungsoptionsseite geben Sie Ihre Kreditkarteninformationen für die Zahlung ein. Wenn Ratenzahlungsoptionen verfügbar sind, können Sie die gewünschte Anzahl von Raten auswählen. Im Rahmen des 3D Secure-Verkaufsprozesses sendet Ihnen die Bank nach Abschluss der Zahlungsschritte und Klicken auf die Schaltfläche 'Termin erhalten' eine SMS und leitet Sie auf die Website weiter. Im nächsten Schritt lesen Sie das Vorvertragliche Informationsformular und die Fernabsatzvereinbarung durch und klicken auf die Option 'Ich habe das Vorvertragliche Informationsformular und die Fernabsatzvereinbarung gelesen und akzeptiert'. Es wird eine Online-Fernabsatzvereinbarung erstellt, in der die Zahlungsinformationen und der Gesamtbetrag als separate Positionen angezeigt werden.\n\nNach Annahme der Vereinbarungen klicken Sie auf die Schaltfläche 'Termin erhalten', um Ihre Bestellung abzuschließen und die Zahlung zu erleichtern.",
+      PGTitle4: 'Erstellung eines Serviceangebots',
+      PGDesciption4:
+        "Die Seite zur Erstellung des Serviceangebots kann über das Operationsangebot, andere Angebote (Ready Packages) oder die Seite 'Meine Angebote' aufgerufen werden. Auf dieser Seite können Sie die Zweitmeinung oder Operation gemäß Ihrem gewünschten Angebot auswählen. Füllen Sie schrittweise alle relevanten Felder aus, um das gewünschte Angebot abzugleichen. Im letzten Schritt erstellen Sie das Serviceangebot, indem Sie Ihre relevanten Krankheiten und Medikamente eingeben.\n\nDieses Angebot wird nur an die relevanten Krankenhäuser gesendet, die für die ausgewählte Operation oder Abteilung geeignet sind. Die von Ihnen angegebenen Informationen sind für das Angebot gültig, und Sie werden möglicherweise aufgefordert, diese Informationen erneut für Ihren Termin und andere Angebote einzugeben.",
+      PGTitle5: 'Antwort auf erhaltenes Serviceangebot',
+      PGDesciption5:
+        'Die vom Patienten/Berater gesendeten Angebote werden nur an die relevanten Krankenhäuser basierend auf den Angebotdetails gesendet. Die reagierenden Institutionen können die Angebotsdetails der anderen nicht sehen. Die Serviceantwort erfolgt vertraulich zwischen dem Patienten und dem Krankenhaus.\n\nGeben Sie gemäß dem Angebot die Abteilung, den Preis, das Datum und die Beschreibungsinformationen ein und senden Sie das Serviceantwortangebot zur Überprüfung und Genehmigung an den Patienten zurück.',
+      PGTitle6: 'Genehmigung des erhaltenen Serviceantwortangebots',
+      PGDesciption6:
+        "Während der Genehmigungsphase des erhaltenen Serviceantwortangebots findet ein privater Prozess zwischen dem Patienten/Berater und dem Krankenhaus statt. Falls gewünscht, können zusätzliche Informationen eingeholt und über die Messaging-Funktion innerhalb der Anwendung kommuniziert werden.\n\nWährend der Angebots-Genehmigungsphase kann die Option 'Persönlicher Assistent' ausgewählt werden, um das Erlebnis und die Zeit im Krankenhaus zu verbessern.\n\nNach Bewertung und Genehmigung des Angebots wird der Patient/Berater zur Zahlungsseite weitergeleitet, um die vom Krankenhaus festgelegte Gebühr zu bezahlen.",
+      PGTitle7: 'Zahlungseinzug für erhaltenes Serviceantwortangebot',
+      PGDesciption7:
+        "Die vom Krankenhaus für das erhaltene Serviceantwortangebot festgelegte Servicegebühr wird auf dieser Seite eingezogen.\n\nGeben Sie auf der Zahlungsoptionsseite Ihre Kreditkarteninformationen für die Zahlung ein. Wenn Ratenzahlungsoptionen verfügbar sind, können Sie die gewünschte Anzahl von Raten auswählen. Im Rahmen des 3D Secure-Verkaufsprozesses sendet Ihnen die Bank nach Abschluss der Zahlungsschritte und Klicken auf die Schaltfläche 'Angebot genehmigen' eine SMS und leitet Sie auf die Website weiter. Im nächsten Schritt lesen Sie das Vorvertragliche Informationsformular und die Fernabsatzvereinbarung durch und klicken auf die Option 'Ich habe das Vorvertragliche Informationsformular und die Fernabsatzvereinbarung gelesen und akzeptiert'. Es wird eine Online-Fernabsatzvereinbarung erstellt, in der die Zahlungsinformationen und der Gesamtbetrag als separate Positionen angezeigt werden.\n\nNach Annahme der Vereinbarungen klicken Sie auf die Schaltfläche 'Angebot genehmigen', um Ihre Bestellung abzuschließen und die Zahlung zu erleichtern.",
+      PGTitle8: 'Durchführung des Video-Termins',
+      PGDesciption8:
+        'Sobald die Zahlung erfolgt ist und der Video-Termin genehmigt wurde, können Sie von der Termindetails-Seite oder der Arzt-Patienten/Berater-Nachrichten-Seite aus durch Klicken auf die entsprechende Schaltfläche zur Video-Konsultationsseite gelangen. Diese Treffen können mit zwei oder drei Teilnehmern durchgeführt werden. Während des Treffens können Kamera und Mikrofon nach Belieben ein- und ausgeschaltet werden. Darüber hinaus können die Parteien bei Bedarf auch ohne Video kommunizieren.',
+      PGTitle9:
+        'Zugriff auf die Fernabsatzvereinbarung innerhalb der Anwendung',
+      PGDesciption9:
+        'Sie können auf die Fernabsatzvereinbarung zugreifen, indem Sie auf den entsprechenden Text oder das entsprechende Kontrollkästchen innerhalb der Zahlungsbildschirme klicken. Darüber hinaus können Sie www.klinikya.com besuchen, um zur entsprechenden Seite zu gelangen und den vollständigen Text einzusehen.',
+      PGTitle10:
+        'Datenschutzregeln für personenbezogene Daten und deren Zugriff in der Anwendung',
+      PGDesciption10:
+        'Sie können auf die Datenschutzregeln für personenbezogene Daten zugreifen, indem Sie auf den entsprechenden Text oder das entsprechende Kontrollkästchen innerhalb der Registrierungsbildschirme klicken. Darüber hinaus können Sie www.klinikya.com besuchen, um zur entsprechenden Seite zu gelangen und den vollständigen Text einzusehen.',
+      PGTitle11: 'Alternative Streitbeilegungsmechanismen im Streitfall',
+      PGDesciption11:
+        'Gemäß Artikel 68 Absatz 1 des Gesetzes zum Schutz des Verbrauchers Nr. 6502 sind Bezirks-/Provinz-Verbraucher-Schiedsstellen für Verbraucherforderungen innerhalb der festgelegten Grenzen zuständig.',
     },
   },
   ar: {
     translation: {
-      documents: 'اتفاقيات المستخدمين',
+      lastDate: 'اخر تاريخ تحديث',
+      junk: 'بسكويت',
+      name: 'اسم',
+      explain: 'الوصف والمدة والتفضيلات',
+      analytic: 'ملفات تعريف الارتباط التحليلية',
+      td1: 'تحليلات كوكل',
+      td2: `[VAR]\n_ga[سنتان]\n_ga[سنتان]\n_gid[يومان]`,
+      td3: 'تتيح هذه الأنواع من ملفات تعريف الارتباط جمع كافة البيانات الإحصائية وبالتالي تحسين عرض الموقع واستخدامه. ومن خلال إضافة الإحصاءات الاجتماعية والبيانات المتعلقة بالاهتمامات إلى هذه الإحصاءات، تتيح لنا Google فهم المستخدمين بشكل أفضل.يستخدم موقعنا ملفات تعريف الارتباط الخاصة بـ Google Analytics. يتم نقل البيانات التي تم جمعها بواسطة ملفات تعريف الارتباط هذه إلى خوادم Google في الولايات المتحدة الأمريكية ويتم الاحتفاظ بالبيانات المعنية وفقًا لمبادئ حماية البيانات في Google. يمكنك النقر {هنا} لمعرفة المزيد حول أنشطة معالجة البيانات التحليلية في Google ومبادئها المتعلقة بحماية البيانات الشخصية.يستخدم موقعنا ملفات تعريف الارتباط الخاصة بـ Google Analytics. يتم نقل البيانات التي تم جمعها بواسطة ملفات تعريف الارتباط هذه إلى خوادم Google في الولايات المتحدة الأمريكية ويتم الاحتفاظ بالبيانات المعنية وفقًا لمبادئ حماية البيانات في Google.لمعرفة المزيد حول أنشطة معالجة البيانات التحليلية في Google ومبادئها المتعلقة بحماية البيانات الشخصية.',
+      click1: 'هنا',
+      td4: 'التحكم في ملفات تعريف الارتباط\nيمكنك النقر.',
+      click2: 'https://tools.google.com/dlpage/gaoptout',
+      technical: 'ملفات تعريف الارتباط التقنية',
+      td5: 'حصة',
+      td6: '[VAR]\nASP.NET_SessionId [20 كيلو بايت]',
+      td7: 'تُستخدم ملفات تعريف الارتباط الخاصة بالجلسة لضمان استمرارية الجلسة. \nمن الممكن القبول أو الرفض من خلال إعدادات المتصفح.',
+      click3: 'انقر',
+      choicesText2: `يمكنك تقديمه إلى شركتنا عن طريق ملء نموذج طلب مالك البيانات، والذي يمكنك الوصول إليه على، أو عن طريق الطرق الأخرى المنصوص عليها في التشريع.`,
+      userDocument: 'اتفاقية المستخدم',
+      junkDocument: 'سياسة ملفات تعريف الارتباط ونص المعلومات',
+      infoDocument: 'المعلومات وإدارة الجودة',
+      sales: 'اتفاقية المستخدم الفردية لـ Klinikya',
+      documents: 'العقود',
       paymentSales: 'مبيعات الدفع',
       sales: 'اتفاقية المستخدم الفردية لـ Klinikya',
       showAllProcedures: 'عرض كل العروض الصحية',
@@ -971,68 +1119,70 @@ const resources = {
         'نوفمبر',
         'ديسمبر',
       ],
-      "ProcessingGuide": "مرشد العمل",
-"PGTitle1": "حجز موعد وجهاً لوجه",
-"PGDesciption1": `
+      ProcessingGuide: 'مرشد العمل',
+      PGTitle1: 'حجز موعد وجهاً لوجه',
+      PGDesciption1: `
 سيتم توجيهك إلى صفحة البحث حيث يمكنك البحث عن المستشفى أو القسم أو اسم الطبيب الذي ترغب في حجز موعد لديه. ستظهر نتائج مشابهة للبحث الذي تم إجراؤه.
 بمجرد تحديد الطبيب المطلوب، يمكنك اختيار تاريخ ووقت الموعد. على الصفحة التالية، سيتم عرض ملخص الاختيار الذي تمت إجراؤه
 بمجرد تأكيد الصفحة الملخصة، سيتم حجز موعدك في النظام وسيتم تحويله إلى آلية التأكيد من قبل الطبيب/المستشفى. بالإضافة إلى ذلك، سيتم نقل الموعد إلى صفحة "مواعيدي" الخاصة بك كمستخدم.
 يرجى ملاحظة أن حجز المواعيد يخضع لموافقة الطبيب/المستشفى
 `,
-"PGTitle2": "موعد مرئي ( اتصال فيديو )عبر الإنترنت",
-"PGDesciption2": `
+      PGTitle2: 'موعد مرئي ( اتصال فيديو )عبر الإنترنت',
+      PGDesciption2: `
 عند اختيار خيار الموعد للمقابلة المرئية، سيتم توجيهك إلى صفحة البحث حيث يمكنك البحث عن المستشفى أو القسم أو اسم الطبيب الذي ترغب في حجز الموعد لديه. ستظهر نتائج مشابهة للبحث الذي تم إجراؤه.
 بمجرد تحديد الطبيب المطلوب، يمكنك اختيار تاريخ ووقت الموعد. على الصفحة التالية، سيتم عرض ملخص الاختيار الذي تمت إجراؤه
 بمجرد تأكيد الصفحة الملخصية، سيتم توجيه المستخدم إلى صفحة الدفع لدفع رسوم خدمة المحادثة المرئية.
 يرجى ملاحظة أنه يجب على المستخدم دفع رسوم خدمة المحادثة المرئية بعد تأكيد الصفحة الملخصة
 `,
-"PGTitle3": "جمع رسوم خدمة الموعد عن بُعد",
-"PGDesciption3": `
+      PGTitle3: 'جمع رسوم خدمة الموعد عن بُعد',
+      PGDesciption3: `
 تُحصَل رسوم خدمة الموعد عن بُعد من قبل المستشفى أو الطبيب على هذه الصفحة
 في شاشة خيارات الدفع، قم بملء معلومات بطاقة الائتمان الخاصة بك للدفع باستخدام بطاقة الائتمان. إذا تم توفير خيار التقسيط، يمكنك اختيار عدد الأقساط المطلوبة. ضمن إطار عمل البيع الآمن ثلاثي الأبعاد
 ، بمجرد استكمال مراحل الدفع والنقر على زر "حجز الموعد"، ستقوم البنك بإرسال رسالة نصية إليك وتوجيهك إلى موقع الويب. في الخطوة التالية، قم بقراءة نموذج المعلومات المسبقة وعقد البيع عن بُعد، وقم بالموافقة عليهما واختيار خيار "لقد قرأت نموذج المعلومات المسبقة وعقد البيع عن بُعد وأوافق عليهما". يتم إنشاء عقد البيع عن بُعد عبر الإنترنت ويظهر معلومات الدفع وإجمالي المبلغ بشكل مفصل.
 بعد قبول العقود، يمكنك النقر على زر "حجز الموعد" لاستكمال الطلب وإتمام عملية الدفع
 
 `,
-"PGTitle4": "إنشاء عرض للاجراء",
-"PGDesciption4": `يتم الوصول إلى صفحة إنشاء عرض الخدمة من خلال زر اخد عرض الموجود في الصفحة الرئيسية، أو عن طريق العروض الأخرى (الحزم الجاهزة) أو صفحة "عروضي". يمكن اختيار العرض الثاني أو العملية على هذه الصفحة. يتم ملء جميع الحقول ذات الصلة خطوة بخطوة وفقًا للعرض الذي ترغب في إنشائه. في المرحلة الأخيرة، يتم إنشاء عرض الخدمة عن طريق إدخال معلوماتك الخاصة بالأمراض التي تعاني منها والأدوية التي تتناولها.
+      PGTitle4: 'إنشاء عرض للاجراء',
+      PGDesciption4: `يتم الوصول إلى صفحة إنشاء عرض الخدمة من خلال زر اخد عرض الموجود في الصفحة الرئيسية، أو عن طريق العروض الأخرى (الحزم الجاهزة) أو صفحة "عروضي". يمكن اختيار العرض الثاني أو العملية على هذه الصفحة. يتم ملء جميع الحقول ذات الصلة خطوة بخطوة وفقًا للعرض الذي ترغب في إنشائه. في المرحلة الأخيرة، يتم إنشاء عرض الخدمة عن طريق إدخال معلوماتك الخاصة بالأمراض التي تعاني منها والأدوية التي تتناولها.
 يتم إرسال هذا العرض فقط إلى المستشفيات ذات الصلة وفقًا للعملية أو القسم الذي اخترته. تلك المعلومات التي أدخلتها صالحة لعرض الخدمة وسيُطلب منك إعادة إدخال تلك المعلومات في المواعيد والعروض الأخرى الخاصة بك
 `,
-"PGTitle5": "الرد على عرض الخدمة المتلقاة",
-"PGDesciption5": `
+      PGTitle5: 'الرد على عرض الخدمة المتلقاة',
+      PGDesciption5: `
 سيتم إرسال عروض الخدمة التي يتم إرسالها من قبل المريض / المستشار فقط إلى المستشفيات ذات الصلة وفقًا لتفاصيل العرض. ولا يمكن للمؤسسات التي ترد على العرض أن ترى تفاصيل عروض بعضها البعض. يتم تنفيذ الرد على العرض بشكل سري بين المريض والمستشفى فقط.
 يتم إدخال معلومات قسم العمل المنفذ لهذه العملية، والسعر، والتاريخ، والوصف المطابقة لعرض الخدمة. سيتم إعادة إرسال عرض الخدمة المتلقاة إلى المريض ليتم مراجعته والموافقة عليه
 
 `,
-"PGTitle6": "الموافقة على العرض المتلقى للخدمة",
-"PGDesciption6": `
+      PGTitle6: 'الموافقة على العرض المتلقى للخدمة',
+      PGDesciption6: `
 في مرحلة الموافقة على العرض المتلقى للخدمة، يمكن للمريض/المستشار والمستشفى التواصل والحصول على مزيد من المعلومات عن طريق الرسائل من خلال التطبيق، إذا رغبوا في ذلك، كجزء من العملية التي تتم بشكل سري بينهما.
 في حال الرغبة في تحسين الوقت المقضى في المستشفى وتجربة المريض/المستشار بشكل أفضل في مرحلة الموافقة على العرض، يمكن اختيار خيار المساعد الشخصي.
 بعد تقييم العرض والموافقة عليه، سيتم توجيه المريض/المستشار إلى صفحة الدفع لدفع المبلغ المحدد من قبل المستشفى
 
 `,
-"PGTitle7": "تحصيل مبلغ تكلفة الخدمة المحددة",
-"PGDesciption7": `
+      PGTitle7: 'تحصيل مبلغ تكلفة الخدمة المحددة',
+      PGDesciption7: `
 بعد الموافقة على عرض الخدمة المتلقى، يتم تحصيل مبلغ تكلفة الخدمة المحددة من قبل المستشفى على هذه الصفحة.
 عند الدفع بواسطة بطاقة الائتمان في شاشة خيارات الدفع، يرجى ملء معلومات بطاقة الائتمان الخاصة بك. إذا تم توفير خيار التقسيط، فيمكنك اختيار عدد الأقساط المطلوب.
 في إطار عملية البيع الآمنة ثلاثية الأبعاد، بمجرد استكمال مراحل الدفع والنقر على زر "تأكيد العرض"، سترسل البنك إليك رسالة نصية وستوجه إلى موقع الويب. في المرحلة التالية، يجب عليك قراءة نموذج المعلومات الأولي وعقد البيع عن بُعد، والموافقة عليهما والنقر على الخيار "لقد قرأت نموذج المعلومات الأولي وعقد البيع عن بُعد وأوافق عليهما". يتم إنشاء عقد البيع عن بُعد عبر الإنترنت وتظهر معلومات الدفع والمبلغ الإجمالي على شكل بنود.
 بعد قبول العقود، يمكنك النقر على زر "تأكيد العرض" لإتمام طلبك وإتمام الدفع
 
 `,
-"PGTitle8": "تنفيذ الموعد عبر المكالمة المرئية",
-"PGDesciption8": `عندما يحين موعد المكالمة المرئية ويتم دفع الرسوم وتأكيد الحجز، يمكن للمستخدم فتح صفحة المكالمة المرئية عن طريق النقر على الزر المناسب في صفحة تفاصيل الموعد أو صفحة المراسلة بين الطبيب والمريض/المستشار. يمكن أن تكون المكالمة المرئية مع شخصين أو ثلاثة أشخاص. يمكن للأطراف إغلاق وفتح الكاميرا والميكروفون حسب الحاجة أثناء المكالمة. بالإضافة إلى ذلك، يمكن للأطراف تبادل المعلومات والنصوص والملفات خلال المكالمة المرئية، إذا رغبوا في ذلك`,
-"PGTitle9": "يمكنك الوصول إلى عقد البيع عن بُعد داخل التطبيق باستخدام التعليمات التالية",
-"PGDesciption9": `
+      PGTitle8: 'تنفيذ الموعد عبر المكالمة المرئية',
+      PGDesciption8: `عندما يحين موعد المكالمة المرئية ويتم دفع الرسوم وتأكيد الحجز، يمكن للمستخدم فتح صفحة المكالمة المرئية عن طريق النقر على الزر المناسب في صفحة تفاصيل الموعد أو صفحة المراسلة بين الطبيب والمريض/المستشار. يمكن أن تكون المكالمة المرئية مع شخصين أو ثلاثة أشخاص. يمكن للأطراف إغلاق وفتح الكاميرا والميكروفون حسب الحاجة أثناء المكالمة. بالإضافة إلى ذلك، يمكن للأطراف تبادل المعلومات والنصوص والملفات خلال المكالمة المرئية، إذا رغبوا في ذلك`,
+      PGTitle9:
+        'يمكنك الوصول إلى عقد البيع عن بُعد داخل التطبيق باستخدام التعليمات التالية',
+      PGDesciption9: `
 في شاشة الدفع، قم بالنقر على النص أو المربع ذي الصلة. عادةً ما يكون هذا رابطًا مثل "نموذج المعلومات الأولي" أو "عقد البيع عن بُعد". عند النقر على هذا الرابط، ستتم إعادة توجيهك إلى عقد البيع عن بُعد
 `,
-"PGTitle10": "شروط الخصوصية المتعلقة بالبيانات الشخصية وكيفية الوصول إليها داخل التطبيق كما يلي",
-"PGDesciption10": `
+      PGTitle10:
+        'شروط الخصوصية المتعلقة بالبيانات الشخصية وكيفية الوصول إليها داخل التطبيق كما يلي',
+      PGDesciption10: `
 يمكنك الوصول إلى شروط الخصوصية المتعلقة بالبيانات الشخصية عن طريق النقر على النص أو المربع ذي الصلة داخل شاشات التسجيل. عادةً ما يكون هذا رابطًا مثل "سياسة الخصوصية" أو "بيان الخصوصية". عند النقر على هذا الرابط، ستتم إعادة توجيهك إلى صفحة شروط الخصوصية المتعلقة بالبيانات الشخصية.
 بالإضافة إلى ذلك، يمكنك الوصول إلى النص الكامل لشروط الخصوصية المتعلقة بالبيانات الشخصية عن طريق زيارة www.klinikya.com والانتقال إلى الصفحة ذات الصلة.
 
 `,
-"PGTitle11": "عند حدوث تَعَارُض ، ما هي آليات تسوية التَعَارُض البديلة",
-"PGDesciption11": `
+      PGTitle11: 'عند حدوث تَعَارُض ، ما هي آليات تسوية التَعَارُض البديلة',
+      PGDesciption11: `
 وفقًا للمادة 68 من قانون حماية المستهلك رقم 6502، فإن لجان حكام المستهلك في المدينة أو المحافظة مخولة للنظر في مطالب المستهلك وفقًا للحدود الدنيا والعليا المحددة
 `,
     },

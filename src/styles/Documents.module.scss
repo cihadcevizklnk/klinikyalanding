@@ -1,7 +1,7 @@
 .text {
   word-wrap: break-word;
   white-space: break-spaces;
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
 }
 .buttons {
@@ -18,4 +18,73 @@
 .active {
   text-decoration: underline;
   color: #184645;
+}
+.text2 {
+  word-wrap: break-word;
+  white-space: break-spaces;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.text2 span {
+  margin-left: 5px;
+}
+
+.text3 {
+  width: 80vw;
+  margin: 0 auto;
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: center;
+}
+.text3 span {
+  margin-left: 5px;
+}
+.click {
+  color: #1a6b6b;
+  font-family: 'FontBold';
+  cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .buttons {
+    flex-direction: column;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    padding-bottom: 0px;
+    gap: 10px;
+    margin: 20px auto;
+  }
+  .text,
+  .text2,
+  .text3 {
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 19px;
+    width: 85vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .buttons {
+    gap: 20px;
+    width: 90vw;
+    text-align: center;
+  }
+  .text,
+  .text2,
+  .text3 {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1441px) {
+  .text,
+  .text2,
+  .text3 {
+    width: 90vw;
+  }
 }
