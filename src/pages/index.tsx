@@ -203,6 +203,10 @@ export default function Home({ targetRef }: any) {
     );
   };
 
+  const handleNavigatePsycology = () => {
+    router.push(`https://portal.klinikya.com/psychology?global`);
+  };
+
   const videoRef = useRef<any>(null);
   const handlePause = () => {
     videoRef.current.pause();
@@ -435,7 +439,10 @@ export default function Home({ targetRef }: any) {
               <p className={styles.departmentTitle}>{t('womensHealth')}</p>
               <p className={styles.departmentText}>{t('womensHealthText')}</p>
             </div>
-            <div className={styles.department} onClick={() => searchData(71)}>
+            <div
+              className={styles.department}
+              onClick={handleNavigatePsycology}
+            >
               <img src="/icons/oncology.svg" alt="oncology" />
               <p className={styles.departmentTitle}>{t('Oncology')}</p>
               <p className={styles.departmentText}>{t('OncologyText')}</p>

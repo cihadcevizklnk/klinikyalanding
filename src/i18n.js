@@ -51,9 +51,9 @@ const resources = {
       womensHealth: 'Kadın Sağlığı',
       womensHealthText:
         'Kadın hastalıkları, doğum ve jinekolojik cerrahi gibi konularda deneyimli doktorlarımızla hizmetinizdeyiz.',
-      Oncology: 'Onkoloji',
+      Oncology: 'Psikoloji',
       OncologyText:
-        'Kanser teşhisi ve tedavisi konularında uzman hekimlerimizle size en iyi tedavi seçeneklerini sunuyoruz.',
+        'Psikolojik teşhis ve tedavi konularında uzman psikologlarımızla size en iyi destek seçeneklerini sunuyoruz.',
       Rheumatology: 'Romatoloji',
       RheumatologyText:
         'Tüm romatolojik rahatsızlıklar konusunda uzman hekimlerimizle size en iyi tedavi seçeneklerini sunuyoruz.',
@@ -311,9 +311,9 @@ const resources = {
       womensHealth: "Women's Health",
       womensHealthText:
         "We are at your service with our experienced doctors in women's health issues such as gynecology, obstetrics and gynecological surgery.",
-      Oncology: 'Oncology',
+      Oncology: 'Psychology',
       OncologyText:
-        'We offer you the best treatment options with our expert physicians in cancer diagnosis and treatment.',
+        'We offer the best support options with our expert psychologists in the field of psychological diagnosis and treatment.',
       Rheumatology: 'Rheumatology',
       RheumatologyText:
         'We offer you the best treatment options with our expert physicians in all rheumatologic disorders.',
@@ -536,9 +536,9 @@ const resources = {
       womensHealth: 'Здоровье женщин',
       womensHealthText:
         'Мы предлагаем услуги опытных врачей в области женских заболеваний, родовспоможения и гинекологической хирургии.',
-      Oncology: 'Онкология',
+      Oncology: 'Психология',
       OncologyText:
-        'Мы предлагаем экспертные услуги по диагностике и лечению рака.',
+        'Предлагаем вам лучшие варианты поддержки с нашими экспертами-психологами в области психологической диагностики и лечения.',
       Rheumatology: 'Ревматология',
       RheumatologyText:
         'Мы предлагаем экспертные услуги по диагностике и лечению всех видов ревматологических заболеваний.',
@@ -762,9 +762,9 @@ const resources = {
       womensHealth: 'Frauengesundheit',
       womensHealthText:
         'Wir bieten die Dienste erfahrener Ärzte in den Bereichen Frauenkrankheiten, Geburtshilfe und gynäkologische Chirurgie an.',
-      Oncology: 'Onkologie',
+      Oncology: 'Psychologie',
       OncologyText:
-        'Wir bieten Ihnen mit unseren erfahrenen Ärzten die besten Behandlungsoptionen bei der Diagnose und Behandlung von Krebs.',
+        'Wir bieten Ihnen die besten Unterstützungsoptionen mit unseren Experten auf dem Gebiet der psychologischen Diagnose und Behandlung.',
       Rheumatology: 'Rheumatologie',
       RheumatologyText:
         'Wir bieten Ihnen mit unseren erfahrenen Ärzten die besten Behandlungsoptionen bei allen rheumatologischen Erkrankungen.',
@@ -987,9 +987,9 @@ const resources = {
       womensHealth: 'صحة المرأة',
       womensHealthText:
         'نحن في خدمتك مع أطبائنا ذوي الخبرة في أمراض النساء والتوليد وجراحة النساء.',
-      Oncology: 'الأورام',
+      Oncology: ' علم النفس',
       OncologyText:
-        'نقدم لك أفضل خيارات العلاج مع أطبائنا الخبراء في تشخيص وعلاج السرطان.',
+        'نقدم لك أفضل خيارات الدعم مع خبراء النفس في مجال التشخيص والعلاج النفسي.',
       Rheumatology: 'الروماتيزم',
       RheumatologyText:
         'نقدم لك أفضل خيارات العلاج مع أطبائنا الخبراء في جميع اضطرابات الروماتيزم.',
