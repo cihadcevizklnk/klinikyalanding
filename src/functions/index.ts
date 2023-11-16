@@ -92,7 +92,15 @@ export const getHospitals = (setArr: any, language: string) => {
     requestOptions
   )
     .then((response) => response.json())
-    .then((res) => setArr(res?.Items))
+    .then((res) => {
+      const temp: any = [];
+      res?.Items?.map((item: any) => {
+        if (item?.Id !== 46 && item?.Id !== 178) {
+          temp.push(item);
+        }
+      });
+      setArr(temp);
+    })
     .catch((error) => console.log('error', error));
 };
 export const getCities = (setArr: any, language: string) => {

@@ -27,7 +27,7 @@ const AllHospitals = () => {
   const handleNavigate = () => {
     router.back();
   };
-  console.log(data);
+
   return (
     <main>
       <button onClick={handleNavigate}>
