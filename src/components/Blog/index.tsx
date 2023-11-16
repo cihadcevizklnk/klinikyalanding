@@ -26,11 +26,6 @@ const Blog = ({ item }: any) => {
         className={styles.blogImg}
         onError={() => handleError(item?.Id)}
       />
-      <p className={styles.time}>
-        {moment(item?.CreatedDateTime)
-          ?.locale(i18n.language)
-          ?.format('ddd DD, MM')}
-      </p>
       <h3>{item?.Title}</h3>
       <p className={styles.text}>
         {item?.ShortText?.slice(0, 300)
