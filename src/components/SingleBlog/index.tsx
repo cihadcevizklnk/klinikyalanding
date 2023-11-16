@@ -39,10 +39,6 @@ const SingleBlog = ({ item, i, handleClickBlog }: any) => {
         />
       </div>
       <div className={styles.right}>
-        <div className={styles.date}>
-          {moment(item.UpdatedDateTime).locale(language).format('dddd D, MMMM')}
-        </div>
-
         <div className={styles.blockTitle}>{item.Title}</div>
         <div className={styles.date}>
           {item.ShortText?.[0] === '"'

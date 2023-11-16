@@ -37,11 +37,6 @@ const BlogDetail = () => {
         <img src="/icons/back icon.svg" alt="back" className={styles.icon} />
       </button>
       <div className={styles.bigTitle}>{blog?.Title}</div>
-      <div className={styles.center}>
-        {moment(blog?.CreatedDateTime)
-          .locale(language)
-          .format('dddd, DD MMMM YYYY')}
-      </div>
       <img
         src={blog?.CoverImageLocation}
         alt="blog-image"
