@@ -14,10 +14,10 @@ const AllHospitals = () => {
       id: id,
       language: language,
     };
-    const encodedObj = encodeURIComponent(JSON.stringify(myObj));
-    router.push(
-      `http://portal.klinikya.com/hospital-details?obj=${encodedObj}`
-    );
+    // const encodedObj = encodeURIComponent(JSON.stringify(myObj));
+    // router.push(
+    //   `http://portal.klinikya.com/hospital-details?obj=${encodedObj}`
+    // );
   };
   useEffect(() => {
     getHospitals(setData, language);

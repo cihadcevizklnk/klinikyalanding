@@ -17,11 +17,11 @@ const Blog = () => {
     getBlogs(setBlogs, language);
   }, [language]);
   const router = useRouter();
-  const handleApp = () => {
-    router.push(
-      `http://portal.klinikya.com/?start=landing?language=${language}`
-    );
-  };
+  // const handleApp = () => {
+  //   router.push(
+  //     `http://portal.klinikya.com/?start=landing?language=${language}`
+  //   );
+  // };
   const [scrollPosition, setScrollPosition] = useState<any>(0);
   useEffect(() => {
     function handleScroll() {
@@ -44,9 +44,9 @@ const Blog = () => {
     <main className={styles.wrapper}>
       <h1 className={styles.center}>{t('bTitle1')}</h1>
       <p className={styles.center}>{t('bText1')}</p>
-      <button className={styles.button} onClick={handleApp}>
+      {/* <button className={styles.button} onClick={handleApp}>
         {t('button')}
-      </button>
+      </button> */}
       {/* <div>{result}</div> */}
       <section className={styles.blocks}>
         {blogs?.map((item: any, i: number) => (

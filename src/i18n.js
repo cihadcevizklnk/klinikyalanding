@@ -291,7 +291,7 @@ const resources = {
       SearchBar2Y: 'Choose a Location',
       SearchBar3Y: 'Choose a Date',
       application: 'Application',
-      web: 'Software Development,',
+      web: 'Software Development',
       professional: 'Professionals',
       service: 'Services',
       blog: 'Blog',
@@ -329,7 +329,7 @@ const resources = {
       Obesity: 'Obesity',
       ObesityText:
         'We offer you the best solutions with our expert dietitians and surgical options for weight loss.',
-      Hospitals: 'Hastaneler',
+      Hospitals: 'Hospitals',
       HospitalsText:
         'Sizlere en iyi sağlık hizmetini sunmak için işbirliği yaptığımız seçkin hastanelerimizle tanışın.',
       BlogText:

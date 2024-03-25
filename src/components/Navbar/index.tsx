@@ -57,16 +57,16 @@ const Navbar = ({ clicked, setClicked }: any) => {
     setValue(val);
   };
   const router = useRouter();
-  const handleApp2 = () => {
-    router.push(
-      `http://portal.klinikya.com/sign-in?global=true?language=${language}`
-    );
-  };
-  const handleApp = () => {
-    router.push(
-      `http://portal.klinikya.com/sign-up?global=true?language=${language}`
-    );
-  };
+  // const handleApp2 = () => {
+  //   router.push(
+  //     `http://portal.klinikya.com/sign-in?global=true?language=${language}`
+  //   );
+  // };
+  // const handleApp = () => {
+  //   router.push(
+  //     `http://portal.klinikya.com/sign-up?global=true?language=${language}`
+  //   );
+  // };
   const [width, setWidth] = useState<any>();
   useEffect(() => {
     function handleResize() {
@@ -161,7 +161,7 @@ const Navbar = ({ clicked, setClicked }: any) => {
           >
             {t('service')}
           </Link>
-          {language === 'tr' && (
+          {/* {language === 'tr' && (
             <Link
               href="/blog"
               className={clicked === 5 ? styles.active : styles.text}
@@ -169,15 +169,15 @@ const Navbar = ({ clicked, setClicked }: any) => {
             >
               {t('blog')}
             </Link>
-          )}
+          )} */}
         </div>
         <div className={styles.buttonWrapper}>
-          <button className={styles.signIn} onClick={handleApp}>
+          {/* <button className={styles.signIn} onClick={handleApp}>
             {t('signIn')}
           </button>
           <button className={styles.logIn} onClick={handleApp2}>
             {t('logIn')}
-          </button>
+          </button> */}
         </div>
         {show && (
           // <Select

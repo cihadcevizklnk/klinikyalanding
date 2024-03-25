@@ -28,8 +28,8 @@ export default function Home({ targetRef }: any) {
       date: value ? new Date(value)?.toISOString() : moment().toISOString(),
       language: language,
     };
-    const encodedObj = encodeURIComponent(JSON.stringify(myObj));
-    router.push(`http://portal.klinikya.com/global-search?obj=${encodedObj}`);
+    // const encodedObj = encodeURIComponent(JSON.stringify(myObj));
+    // router.push(`http://portal.klinikya.com/global-search?obj=${encodedObj}`);
   };
 
   const [procedures, setProcedures] = useState<any>();
@@ -115,6 +115,7 @@ export default function Home({ targetRef }: any) {
   }, [videoVisit]);
   const [value, setValue] = useState<any>();
   const searchData = (id: number) => {
+    return null;
     const myObj = {
       id: id,
       language,
@@ -126,19 +127,19 @@ export default function Home({ targetRef }: any) {
     router.push(`http://portal.klinikya.com/global-search?obj=${encodedObj}`);
   };
   const handleApp = () => {
-    router.push(
-      `http://portal.klinikya.com/?start=landing?language=${language}`
-    );
+    // router.push(
+    //   `http://portal.klinikya.com/?start=landing?language=${language}`
+    // );
   };
   const handleApp2 = (e: any) => {
     const myObj = {
       procedures: e,
       language,
     };
-    const encodedObj = encodeURIComponent(JSON.stringify(myObj));
-    router.push(
-      `http://portal.klinikya.com/global-ready-made-procedure?obj=${encodedObj}`
-    );
+    // const encodedObj = encodeURIComponent(JSON.stringify(myObj));
+    // router.push(
+    //   `http://portal.klinikya.com/global-ready-made-procedure?obj=${encodedObj}`
+    // );
   };
   const [startP, setStartP] = useState<any>(0);
   const [endP, setEndP] = useState<any>(4);
@@ -198,13 +199,14 @@ export default function Home({ targetRef }: any) {
       language: language,
     };
     const encodedObj = encodeURIComponent(JSON.stringify(myObj));
-    router.push(
-      `http://portal.klinikya.com/hospital-details?obj=${encodedObj}`
-    );
+    // router.push(
+    //   `http://portal.klinikya.com/hospital-details?obj=${encodedObj}`
+    // );
   };
 
   const handleNavigatePsycology = () => {
-    router.push(`https://portal.klinikya.com/psychology?global`);
+    return null
+    // router.push(`https://portal.klinikya.com/psychology?global`);
   };
 
   const videoRef = useRef<any>(null);
@@ -234,9 +236,9 @@ export default function Home({ targetRef }: any) {
             <div className={styles.partOneTopLeft}>
               <h1>{t('MainHeading')}</h1>
               <p className={`${'text18'}`}>{t('MainText')}</p>
-              <button className={styles.button} onClick={handleApp}>
+              {/* <button className={styles.button} onClick={handleApp}>
                 {t('button')}
-              </button>
+              </button> */}
             </div>
             {/* <img
               src="/icons/gif3.gif"
@@ -316,7 +318,7 @@ export default function Home({ targetRef }: any) {
               />
             </div> */}
           </div>
-          <form onSubmit={handleClick} className={styles.searchWrapper}>
+          {/* <form onSubmit={handleClick} className={styles.searchWrapper}>
             <div className={styles.searchWrapperInside}>
               <img
                 src="/icons/search.svg"
@@ -371,14 +373,14 @@ export default function Home({ targetRef }: any) {
               />
               <p>{t('search')}</p>
             </button>
-          </form>
+          </form> */}
         </section>
         <section className={styles.partTwoWrapper}>
           <div>
             <h1 className={styles.title}>{t('HealthPackagesTitle')}</h1>
             <p className={styles.procedureText}>{t('HealthPackagesText')}</p>
           </div>
-          <div className={styles.procedures}>
+          {/* <div className={styles.procedures}>
             {procedures?.slice(startP, endP)?.map((item: any) => (
               <button
                 className={styles.boxWrapper}
@@ -406,8 +408,8 @@ export default function Home({ targetRef }: any) {
                 </div>
               </button>
             ))}
-          </div>
-          <div className={styles.arrowWrapper}>
+          </div> */}
+          {/* <div className={styles.arrowWrapper}>
             <img
               src="/icons/next.svg"
               alt="prev"
@@ -426,7 +428,7 @@ export default function Home({ targetRef }: any) {
           </div>
           <Link href="/all-health-packages" className={styles.viewHospital}>
             {t('showAllProcedures')}
-          </Link>
+          </Link> */}
         </section>
         <section className={styles.partThreeWrapper} ref={departments}>
           <h1 ref={targetRef} className={styles.title}>
@@ -487,13 +489,13 @@ export default function Home({ targetRef }: any) {
           <h1 className={styles.title}>{t('Hospitals')}</h1>
           <p className={styles.departmentsText}>{t('HospitalsText')}</p>
 
-          <div className={styles.hospitals}>
+          {/* <div className={styles.hospitals}>
             {hospitalArr?.slice(start, end)?.map((item: any) => (
               <Hospital item={item} />
             ))}
-          </div>
+          </div> */}
 
-          <div className={styles.dots}>
+          {/* <div className={styles.dots}>
             <img
               src={
                 start === 0
@@ -547,7 +549,7 @@ export default function Home({ targetRef }: any) {
           </div>
           <Link href="/all-hospitals" className={styles.viewHospital}>
             {t('showAllHospitals')}
-          </Link>
+          </Link> */}
         </section>
         {language === 'tr' && (
           <section className={styles.partFiveWrapper}>

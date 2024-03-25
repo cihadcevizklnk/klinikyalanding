@@ -8,9 +8,9 @@ const AllHealthPackages = () => {
   const [data, setData] = useState<any>();
   const router = useRouter();
   const language = i18n.language;
-  useEffect(() => {
-    getProcedures(setData, language);
-  }, [language]);
+  // useEffect(() => {
+  //   getProcedures(setData, language);
+  // }, [language]);
 
   const { t } = useTranslation();
 
@@ -34,7 +34,7 @@ const AllHealthPackages = () => {
       </button>
       <h1 className={styles.title}>{t('HealthPackagesTitle')}</h1>
       <div className={styles.wrapper}>
-        {data?.map((item: any) => (
+        {/* {data?.map((item: any) => (
           <button
             className={styles.boxWrapper}
             onClick={() => handleApp2(item)}
@@ -60,7 +60,7 @@ const AllHealthPackages = () => {
               <img src="/icons/Arrow.svg" alt="arrow" />
             </div>
           </button>
-        ))}
+        ))} */}
       </div>
     </main>
   );
