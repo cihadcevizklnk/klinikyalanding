@@ -140,13 +140,13 @@ const Navbar = ({ clicked, setClicked }: any) => {
           >
             {t('application')}
           </Link>
-          <Link
+          {/* <Link
             href="/web"
             className={clicked === 2 ? styles.active : styles.text}
             onClick={() => setClicked(2)}
           >
             {t('web')}
-          </Link>
+          </Link> */}
           <Link
             href="/professionals"
             className={clicked === 3 ? styles.active : styles.text}

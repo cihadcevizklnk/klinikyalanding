@@ -84,13 +84,13 @@ const Footer = ({ clicked, setClicked, setSelectedDocument }: any) => {
         <Link href="/">{t('HealthPackagesTitle')}</Link>
         <Link href="/">{t('Hospitals')}</Link>
         {language == 'tr' && <Link href="/">{t('blog')}</Link>}
-        <Link
+        {/* <Link
           href="/web"
           className={styles.bold}
           onClick={() => handleClick(2)}
         >
           {t('web')}
-        </Link>
+        </Link> */}
 
       </section>
       <section className={styles.footerRight}>
