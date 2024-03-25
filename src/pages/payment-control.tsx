@@ -35,9 +35,9 @@ const PaymentControl = () => {
       if (result.Code == 14) {
         // Payment Decline
         alert('Payment Decline');
-        router.push(`http://portal.klinikya.com/`);
+        // router.push(`http://portal.klinikya.com/`);
       } else if (result.Code == 1) {
-        router.push(`http://portal.klinikya.com/`);
+        // router.push(`http://portal.klinikya.com/`);
       }
     } else {
       //   alert('Boş');
@@ -88,7 +88,7 @@ const PaymentControl = () => {
                 : null}
             </div>
             <a
-              href="http://portal.klinikya.com/"
+              href="http://klinikya.com/"
               onClick={() => {
                 clearInterval(intervalState);
               }}

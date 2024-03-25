@@ -83,7 +83,7 @@ const Footer = ({ clicked, setClicked, setSelectedDocument }: any) => {
         </Link>
         <Link href="/">{t('HealthPackagesTitle')}</Link>
         <Link href="/">{t('Hospitals')}</Link>
-        <Link href="/">{t('blog')}</Link>
+        {language == 'tr' && <Link href="/">{t('blog')}</Link>}
         <Link
           href="/web"
           className={styles.bold}
@@ -91,7 +91,10 @@ const Footer = ({ clicked, setClicked, setSelectedDocument }: any) => {
         >
           {t('web')}
         </Link>
-        <Link
+
+      </section>
+      <section className={styles.footerRight}>
+      <Link
           className={styles.bold}
           href="/professionals"
           onClick={() => handleClick(3)}
@@ -118,9 +121,7 @@ const Footer = ({ clicked, setClicked, setSelectedDocument }: any) => {
           {t('junkDocument')}
         </Link>
         <div onClick={openPdf}>{t('infoDocument')}</div>
-      </section>
-      <section className={styles.footerRight}>
-        <p className={styles.bold}>{t('download')}</p>
+        {/* <p className={styles.bold}>{t('download')}</p>
         <div className={styles.download}>
           <a
             href="https://play.google.com/store/apps/details?id=com.klinikya&pli=1"
@@ -138,7 +139,7 @@ const Footer = ({ clicked, setClicked, setSelectedDocument }: any) => {
           >
             <img src="/icons/Badge iOS.svg" alt="ios" className={styles.icon} />
           </a>
-        </div>
+        </div> */}
       </section>
     </footer>
   );

@@ -17,13 +17,14 @@ const Hospital = ({ item }: any) => {
       language: language,
     };
     const encodedObj = encodeURIComponent(JSON.stringify(myObj));
-    router.push(
-      `http://portal.klinikya.com/hospital-details?obj=${encodedObj}`
-    );
+    // router.push(
+    //   `http://portal.klinikya.com/hospital-details?obj=${encodedObj}`
+    // );
   };
 
   return (
-    <div className={styles.hospital} onClick={() => handleClick(item?.Id)}>
+    // <div className={styles.hospital} onClick={() => handleClick(item?.Id)}>
+    <div className={styles.hospital} onClick={() => {}}>
       <div className={styles.deneme}>
         <img
           src={

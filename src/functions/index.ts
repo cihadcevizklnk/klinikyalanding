@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import i18n from '../i18n';
 import { useTranslation } from 'react-i18next';
+import { AllBlogListTr } from '@/constant/blogs';
 
 export const getProcedures = (setArr: any, language: string) => {
   const myHeaders = new Headers();
@@ -35,6 +36,9 @@ export const getProcedures = (setArr: any, language: string) => {
 };
 
 export const getBlogs = (setArr: any, language: string) => {
+  setArr(AllBlogListTr)
+  return null
+  //====================
   const myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
   myHeaders.append('Accept', 'text/plain');
@@ -134,6 +138,10 @@ export const getCities = (setArr: any, language: string) => {
 };
 
 export const getBlog = (id: any, locale: any, setArr: any) => {
+  
+  setArr(AllBlogListTr.find(item => item.Id == id))
+
+  return null;
   var myHeaders = new Headers();
   myHeaders.append('Accept', 'text/plain');
   myHeaders.append(
